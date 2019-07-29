@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "0.53.1" %}
+{% set version = "0.53.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 31d92fc583351664ca48df146e115c66ab41070520bb02ef35e14a9dec156ea5
+  sha256: 325ae5fe5e0839773677feed59552ec95713230d638fceccbc86803b3169e7c1
 
 build:
   number: 0
@@ -40,7 +40,7 @@ requirements:
     - treelib >=1.5.5
     - inflect >=2.1.0
     - humanize >=0.5.1
-    - ruamel.yaml >=0.15.91
+    - ruamel.yaml >=0.15.91,<0.16
     - funcy >=1.12
     - pathspec >=0.5.9
     - shortuuid >=0.5.0
