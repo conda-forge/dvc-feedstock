@@ -57,6 +57,7 @@ requirements:
     - pyarrow ==0.14.0  # [py>27 or unix]
     - tqdm >=4.34.0
     - flufl.lock >=3.2  # [py>27]
+    - packaging >=19.0
 
 test:
   imports:
