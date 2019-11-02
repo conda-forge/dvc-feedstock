@@ -45,7 +45,7 @@ requirements:
     - funcy >=1.12
     - pathspec >=0.5.9
     - shortuuid >=0.5.0
-    - win-unicode-console >=0.5  # [win]
+    - win_unicode_console >=0.5  # [win]
     - networkx >=2.1
     - futures  # [py==27]
     - pathlib2  # [py==27]
