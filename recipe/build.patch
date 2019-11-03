@@ -1,0 +1,19 @@
+From e384d1ca13a5cc76e238ee10c3af7b493e6ac28f Mon Sep 17 00:00:00 2001
+From: n3hrox <n3hrox@gmail.com>
+Date: Sun, 3 Nov 2019 21:05:24 +0100
+Subject: [PATCH] add build patch
+
+---
+ dvc/build.py | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 dvc/build.py
+
+diff --git a/dvc/build.py b/dvc/build.py
+new file mode 100644
+index 00000000..84c77c84
+--- /dev/null
++++ b/dvc/build.py
+@@ -0,0 +1 @@
++PKG = "conda"
+-- 
+2.17.1
