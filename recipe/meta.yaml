@@ -12,7 +12,7 @@ source:
     - build.patch
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - dvc = dvc.main:main
@@ -57,7 +57,7 @@ requirements:
     - oss2 ==2.6.1
     - paramiko >=2.5.0
     - pyarrow ==0.14.0  # [py>27 or unix]
-    - tqdm >=4.34.0
+    - tqdm >=4.38.0
     - flufl.lock >=3.2  # [py>27]
     - packaging >=19.0
 
