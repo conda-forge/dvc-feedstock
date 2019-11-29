@@ -12,7 +12,7 @@ source:
     - build.patch
 
 build:
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - dvc = dvc.main:main
@@ -51,6 +51,7 @@ requirements:
     - networkx >=2.1
     - futures  # [py==27]
     - pathlib2  # [py==27]
+    - contextlib2  # [py==27]
     - google-cloud-storage ==1.13.0
     - boto3 ==1.9.115
     - azure-storage-blob ==2.1.0
@@ -60,10 +61,16 @@ requirements:
     - tqdm >=4.38.0
     - flufl.lock >=3.2  # [py>27]
     - packaging >=19.0
+    - pyyaml >=5.1.2
 
 test:
+  requires:
+    - git
   imports:
     - dvc
+  commands:
+    - dvc version
+    - dvc get https://github.com/iterative/dvc scripts/innosetup/dvc.ico
 
 about:
   home: https://dvc.org/
