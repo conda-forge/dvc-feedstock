@@ -64,6 +64,8 @@ requirements:
     - pyyaml >=5.1.2
 
 test:
+  requires:
+    - git
   imports:
     - dvc
   commands:
