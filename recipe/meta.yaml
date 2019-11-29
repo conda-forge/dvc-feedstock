@@ -51,6 +51,7 @@ requirements:
     - networkx >=2.1
     - futures  # [py==27]
     - pathlib2  # [py==27]
+    - contextlib2  # [py==27]
     - google-cloud-storage ==1.13.0
     - boto3 ==1.9.115
     - azure-storage-blob ==2.1.0
