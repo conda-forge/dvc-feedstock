@@ -12,7 +12,7 @@ source:
     - build.patch
 
 build:
-  number: 2
+  number: 3
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - dvc = dvc.main:main
@@ -48,6 +48,7 @@ requirements:
     - pathspec >=0.5.9
     - shortuuid >=0.5.0
     - win_unicode_console >=0.5  # [win]
+    - pywin32 >=225  # [win]
     - networkx >=2.1
     - futures  # [py==27]
     - pathlib2  # [py==27]
