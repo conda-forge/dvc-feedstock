@@ -44,8 +44,8 @@ requirements:
     - treelib >=1.5.5
     - inflect >=2.1.0
     - humanize >=0.5.1
-    - ruamel.yaml >=0.15.91,<0.16
-    - funcy >=1.12
+    - ruamel.yaml >=0.16.1
+    - funcy >=1.14
     - pathspec >=0.5.9
     - shortuuid >=0.5.0
     - win_unicode_console >=0.5  # [win]
@@ -57,7 +57,7 @@ requirements:
     - oss2 ==2.6.1
     - paramiko >=2.5.0
     - pyarrow ==0.14.0
-    - tqdm >=4.38.0
+    - tqdm >=4.40.0
     - flufl.lock >=3.2
     - packaging >=19.0
     - pyyaml >=5.1.2
