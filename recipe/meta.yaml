@@ -12,7 +12,7 @@ source:
     - build.patch
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [py<35]
   entry_points:
@@ -57,7 +57,7 @@ requirements:
     - oss2 ==2.6.1
     - paramiko >=2.5.0
     - pyarrow ==0.14.0
-    - tqdm >=4.40.0
+    - tqdm >=4.40.0,<5
     - flufl.lock >=3.2
     - packaging >=19.0
     - pyyaml >=5.1.2
