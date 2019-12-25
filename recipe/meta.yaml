@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "0.77.3" %}
+{% set version = "0.78.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 180645c3a074e6774219be76f1349781210e23dbf7a6d7330608ebe504687192
+  sha256: 577ae8edbb5cb738de5aa350904aaaf5637b0514645a6290112558288ac65796
   patches:
     - build.patch
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [py<35]
   entry_points:
@@ -42,7 +42,7 @@ requirements:
     - distro >=1.3.0
     - appdirs >=1.4.3
     - treelib >=1.5.5
-    - inflect >=2.1.0
+    - inflect >=2.1.0,<4
     - humanize >=0.5.1
     - ruamel.yaml >=0.16.1
     - funcy >=1.14
