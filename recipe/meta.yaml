@@ -12,7 +12,7 @@ source:
     - build.patch
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [py<35]
   entry_points:
@@ -57,8 +57,7 @@ requirements:
     - flatten_json >=0.1.6
     - texttable >=0.5.2
     - google-cloud-storage ==1.19.0
-    - pydrive2 ==1.4.0
-    - google-api-python-client >=1.2
+    - pydrive2 ==1.4.1
     - boto3 >=1.9.201
     - azure-storage-blob ==2.1.0
     - oss2 ==2.6.1
