@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "0.82.3" %}
+{% set version = "0.82.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6a071d17cc7f8093d446a92d9d7bf5b3f3b0ec6a8e2dfffdf9259573b9652f76
+  sha256: dfcfb622287b7ba0af1bf3a739800f41b7a82fd16b58eb71eed60f06dc2226ff
   patches:
     - build.patch
 
@@ -57,7 +57,7 @@ requirements:
     - flatten_json >=0.1.6
     - texttable >=0.5.2
     - google-cloud-storage ==1.19.0
-    - pydrive2 ==1.4.1
+    - pydrive2 ==1.4.2
     - boto3 >=1.9.201
     - azure-storage-blob ==2.1.0
     - oss2 ==2.6.1
