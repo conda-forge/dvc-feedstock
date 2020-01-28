@@ -57,7 +57,7 @@ requirements:
     - flatten_json >=0.1.6
     - texttable >=0.5.2
     - google-cloud-storage ==1.19.0
-    - pydrive2 ==1.4.1
+    - pydrive2 ==1.4.2
     - boto3 >=1.9.201
     - azure-storage-blob ==2.1.0
     - oss2 ==2.6.1
