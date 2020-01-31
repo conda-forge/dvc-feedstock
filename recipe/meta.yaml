@@ -54,7 +54,7 @@ requirements:
     - win_unicode_console >=0.5  # [win]
     - pywin32 >=225  # [win]
     - networkx >=2.1,<2.4
-    - pydot >= 1.2.4
+    - pydot >=1.2.4
     - flatten_json >=0.1.6
     - texttable >=0.5.2
     - google-cloud-storage ==1.19.0
