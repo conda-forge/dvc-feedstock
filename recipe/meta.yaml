@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "0.82.6" %}
+{% set version = "0.82.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cecb29230cf1f885d571670550b1bfd545afb2c3cb669c0d1ced598c1a7fb1f7
+  sha256: d1d263cada2de8562f410149306df832c7b36eb401f55159e355d5f17e749f6d
   patches:
     - build.patch
 
@@ -54,6 +54,7 @@ requirements:
     - win_unicode_console >=0.5  # [win]
     - pywin32 >=225  # [win]
     - networkx >=2.1,<2.4
+    - pydot >=1.2.4
     - flatten_json >=0.1.6
     - texttable >=0.5.2
     - google-cloud-storage ==1.19.0
