@@ -28,8 +28,8 @@ requirements:
     - ply >=3.9
     - colorama >=0.3.9
     - configobj >=5.0.6
-    - gitpython >=2.1.8
-    - gitdb2 >=2.0.6
+    - gitpython >=3
+    - gitdb2 <3  # can be removed after gitpython 3.0.8
     - setuptools >=34.0.0
     - nanotime >=0.5.2
     - pyasn1 >=0.4.1
