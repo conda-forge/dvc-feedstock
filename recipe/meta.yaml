@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "0.86.5" %}
+{% set version = "0.87.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5f8e74ebcead7617832664a170ebae709c527a71d249b936f2336890a1ca8b03
+  sha256: df6d918199b2a9cbf90f33da7827f65543a08832841027232e75ab6592d6a96a
   patches:
     - build.patch
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
-  skip: True  # [py<35]
+  script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [py<35]
   entry_points:
     - dvc = dvc.main:main
 
@@ -79,7 +79,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'DVC tracks ML models and data sets'
+  summary: DVC tracks ML models and data sets
 
   description: |
     Data Version Control or DVC is an open-source tool for data science
