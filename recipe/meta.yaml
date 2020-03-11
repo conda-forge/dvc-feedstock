@@ -12,7 +12,7 @@ source:
     - build.patch
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<35]
   entry_points:
@@ -57,6 +57,7 @@ requirements:
     - pydot >=1.2.4
     - flatten_json >=0.1.6
     - texttable >=0.5.2
+    - pygtrie ==2.3.2
     - google-cloud-storage ==1.19.0
     - pydrive2 ==1.4.5
     - boto3 >=1.9.201
