@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "0.91.0" %}
+{% set version = "0.91.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6f926534de53f139a0b1516e21520ecf9188d423b73c65f779aa7b2bbe575fe5
+  sha256: 1bcd66e51e045ae081b26116771b04373b960fd0b643bbd506f614fd6107c6c9
   patches:
     - build.patch
 
@@ -58,6 +58,7 @@ requirements:
     - flatten_json >=0.1.6
     - texttable >=0.5.2
     - pygtrie ==2.3.2
+    - dpath >=1.4.2
     - google-cloud-storage ==1.19.0
     - pydrive2 ==1.4.5
     - boto3 >=1.9.201
@@ -93,4 +94,4 @@ extra:
   recipe-maintainers:
     - shcheklein
     - efiop
-    - MaxRis
+    - maxhora
