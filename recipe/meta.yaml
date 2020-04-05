@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "0.92.0" %}
+{% set version = "0.92.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f5b5cfee4e461edee40df7e8d26781476505bb179e2aea176cf621f58eb0914e
+  sha256: b226a3ff5000e729adeb2e18de35860b7650f1090691f36393f70d722ffa5a38
   patches:
     - build.patch
 
@@ -42,12 +42,12 @@ requirements:
     - treelib >=1.5.5
     - inflect >=2.1.0,<4
     - humanize >=0.5.1
-    - pyyaml >=5.1.2,<5.2
+    - pyyaml >=5.1.2,<5.4
     - ruamel.yaml >=0.16.1
     - funcy >=1.14
     - pathspec >=0.6.0
     - shortuuid >=0.5.0
-    - tqdm >=4.40.0,<5
+    - tqdm >=4.45.0,<5
     - packaging >=19.0
     - zc.lockfile >=1.2.1
     - flufl.lock >=3.2
@@ -60,7 +60,7 @@ requirements:
     - pygtrie ==2.3.2
     - dpath >=1.4.2
     - google-cloud-storage ==1.19.0
-    - pydrive2 ==1.4.5
+    - pydrive2 >=1.4.9
     - boto3 >=1.9.201
     - azure-storage-blob ==2.1.0
     - oss2 ==2.6.1
