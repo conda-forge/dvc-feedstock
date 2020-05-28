@@ -12,7 +12,7 @@ source:
     - build.patch
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<35]
   entry_points:
@@ -58,14 +58,13 @@ requirements:
     - texttable >=0.5.2
     - pygtrie ==2.3.2
     - dpath >=1.4.2
-#    - google-cloud-storage ==1.19.0
-#    - pydrive2 >=1.4.9
-#    - boto3 >=1.9.201
-#    - azure-storage-blob ==2.1.0
-#    - oss2 ==2.6.1
-#    - paramiko >=2.5.0
-#    - pyarrow ==0.15.1  # [py<38]
-#    - pyarrow ==0.16.0  # [py38]
+    - google-cloud-storage ==1.19.0
+    - pydrive2 >=1.4.9
+    - boto3 >=1.9.201
+    - azure-storage-blob ==2.1.0
+    - oss2 >=2.11.0
+    - paramiko >=2.5.0
+    - pyarrow ==0.17.1
 
 test:
   requires:
