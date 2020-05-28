@@ -64,8 +64,7 @@ requirements:
     - azure-storage-blob ==2.1.0
     - oss2 ==2.6.1
     - paramiko >=2.5.0
-    - pyarrow ==0.15.1  # [py<38]
-    - pyarrow ==0.16.0  # [py38]
+    - pyarrow ==0.17.1
 
 test:
   requires:
