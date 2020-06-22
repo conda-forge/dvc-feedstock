@@ -71,7 +71,6 @@ test:
     - dvc
   commands:
     - dvc version
-    - dvc get https://github.com/iterative/dvc scripts/innosetup/dvc.ico
 
 about:
   home: https://dvc.org/
