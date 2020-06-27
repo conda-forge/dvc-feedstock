@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0d77feaf1b3c2349038d51597eb71dd6c5d5237a46ed9566fc41ccea38ef3bd4
+  sha256: b65e11caf4fe168feddfcb4fef750fc88eab941e7631ac38d0789c6392735cd7
   patches:
     - build.patch
 
@@ -55,7 +55,7 @@ requirements:
     - tabulate >=0.8.7
     - pygtrie ==2.3.2
     - dpath >=1.4.2
-    - shtab >=1.0.2
+    - shtab >=1.0.3
     - google-cloud-storage ==1.19.0
     - pydrive2 >=1.4.14
     - boto3 >=1.9.201
