@@ -60,6 +60,7 @@ requirements:
     - pydrive2 >=1.4.14
     - boto3 >=1.9.201
     - azure-storage-blob ==2.1.0
+    - azure-cli-core >=2.0.70
     - oss2 >=2.11.0
     - paramiko >=2.5.0
     - pyarrow >=0.17.1
