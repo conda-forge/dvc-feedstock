@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b65e11caf4fe168feddfcb4fef750fc88eab941e7631ac38d0789c6392735cd7
+  sha256: afbab485a4d41a18ae3993baa947b2841835e1a7757b16edb7d92e7b9f8fb420
   patches:
     - build.patch
 
@@ -46,7 +46,7 @@ requirements:
     - tqdm >=4.45.0,<5
     - packaging >=19.0
     - zc.lockfile >=1.2.1
-    - flufl.lock >=3.2
+    - flufl.lock >=3.2,<4
     - win_unicode_console >=0.5  # [win]
     - pywin32 >=225  # [win]
     - networkx >=2.1,<2.4
@@ -60,6 +60,7 @@ requirements:
     - pydrive2 >=1.4.14
     - boto3 >=1.9.201
     - azure-storage-blob ==2.1.0
+    - knack
     - oss2 >=2.11.0
     - paramiko >=2.5.0
     - pyarrow >=0.17.1
