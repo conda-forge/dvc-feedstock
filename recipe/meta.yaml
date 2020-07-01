@@ -46,7 +46,7 @@ requirements:
     - tqdm >=4.45.0,<5
     - packaging >=19.0
     - zc.lockfile >=1.2.1
-    - flufl.lock >=3.2
+    - flufl.lock >=3.2,<4
     - win_unicode_console >=0.5  # [win]
     - pywin32 >=225  # [win]
     - networkx >=2.1,<2.4
