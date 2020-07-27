@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "1.1.11" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b88af47b5e3a2377282d3ad9bbd3295f1ec3ec6811020f9deb95be19aa2de00d
+  sha256: 45207cf33005b8707d080e4584a974343d6fedcf41f977a4c519622984c2f686
   patches:
     - build.patch
 
@@ -51,7 +51,7 @@ requirements:
     - pywin32 >=225  # [win]
     - networkx >=2.1,<2.5
     - pydot >=1.2.4
-    - flatten_json >=0.1.6
+    - flatten_json >=0.1.6,<0.1.8
     - tabulate >=0.8.7
     - pygtrie ==2.3.2
     - dpath >=1.4.2
