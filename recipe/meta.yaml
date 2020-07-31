@@ -56,6 +56,7 @@ requirements:
     - pygtrie ==2.3.2
     - dpath >=1.4.2
     - shtab >=1.1.0,<2
+    - rich >=3.0.5
     - google-cloud-storage ==1.19.0
     - pydrive2 >=1.4.14
     - boto3 >=1.9.201
