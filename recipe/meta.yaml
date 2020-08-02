@@ -12,9 +12,9 @@ source:
     - build.patch
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<35]
+  skip: true  # [py<36]
   entry_points:
     - dvc = dvc.main:main
 
@@ -40,6 +40,7 @@ requirements:
     - appdirs >=1.4.3
     - pyyaml >=5.1.2,<5.4
     - ruamel.yaml >=0.16.1
+    - toml >=0.10.1
     - funcy >=1.14
     - pathspec >=0.6.0
     - shortuuid >=0.5.0
