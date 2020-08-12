@@ -61,7 +61,7 @@ requirements:
     - google-cloud-storage ==1.19.0
     - pydrive2 >=1.4.14
     - boto3 >=1.9.201
-    - azure-storage-blob ==2.1.0
+    - azure-storage-blob >=12.0
     - knack
     - oss2 >=2.11.0
     - paramiko >=2.5.0
