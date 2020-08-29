@@ -194,6 +194,6 @@ Feedstock Maintainers
 =====================
 
 * [@efiop](https://github.com/efiop/)
-* [@maxhora](https://github.com/maxhora/)
 * [@shcheklein](https://github.com/shcheklein/)
+* [@skshetry](https://github.com/skshetry/)
 
