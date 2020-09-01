@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "1.6.4" %}
+{% set version = "1.6.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: abcf2f15a7ca6042ca938f78120397a20ef9b097a262e40e8aa97b5d23171a97
+  sha256: f843b9e48378714e1f0c2aebce7ecf81503a057b9fea2cac56eb78140c78cb1f
   patches:
     - build.patch
 
@@ -52,7 +52,7 @@ requirements:
     - networkx >=2.1,<2.5
     - pydot >=1.2.4
     - dataclasses  # [py<37]
-    - flatten_json >=0.1.6,<0.1.8
+    - flatten-dict >=0.3.0,<1
     - tabulate >=0.8.7
     - pygtrie ==2.3.2
     - dpath >=1.4.2
