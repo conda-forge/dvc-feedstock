@@ -65,7 +65,6 @@ requirements:
     - knack
     - oss2 >=2.11.0
     - paramiko >=2.5.0
-    
     - pyarrow >=0.17.1
 
 test:
