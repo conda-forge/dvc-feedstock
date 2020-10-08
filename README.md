@@ -5,9 +5,13 @@ Home: https://dvc.org/
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dvc-feedstock/blob/master/LICENSE.txt)
 
 Summary: DVC tracks ML models and data sets
+
+Development: https://github.com/iterative/dvc
+
+Documentation: https://dvc.org/doc
 
 Data Version Control or DVC is an open-source tool for data science
 and machine learning projects.
