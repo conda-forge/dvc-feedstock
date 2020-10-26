@@ -17,6 +17,7 @@ source:
 # number is propagated into the outputs below
 build:
   number: 1
+  skip: true  # [py<36]
 
 # These tests are executed for the top-level `dvc` package
 test:
@@ -46,7 +47,7 @@ test:
 # We define extras through "private" subpackages and a single top-level `dvc`
 # metapackage. The metapackage at a given build version references the extras
 # subpackages at the same build version. `_dvc` includes the dvc package itself
-# and core dependencies. `_dvc-gs`, `_dv-s3`, et al contain no code, but
+# and core dependencies. `_dvc-gs`, `_dvc-s3`, et al contain no code, but
 # reference the `_dvc` base package and the requirements requirements for that extra.
 #
 # Adding a new extra...
