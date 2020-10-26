@@ -5,6 +5,19 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 905385b8cf616d9cd1e78530f0c8dc7f2064400efa72e6846fad689b5cfbf8fd
+  patches:
+    - build.patch
+
+# The "true" build is specified in the _dvc output below.
+# Of the build properties here and below:
+# noarch is not inherited and must be specified per output
+# number is propagated into the outputs below
+build:
+  number: 1
+
 # DVC includes requirements-only extras to enable support for different
 # remotes. Here we build a `dvc` conda package equivalent to the `dvc[all]` pip
 # package, with a `_dvc` base package containing dvc alone. This allows a
@@ -29,43 +42,29 @@ package:
 # Adding a new extra...
 #
 # Each extra needs to be added in two places:
-# 1. Add the extra with a pin_subpackage directive under `requirements.run`.
-# 2. Add the extra under `outputs` specifying the additional runtime requirements.
-
-source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 905385b8cf616d9cd1e78530f0c8dc7f2064400efa72e6846fad689b5cfbf8fd
-  patches:
-    - build.patch
-
-# The "true" build is specified in the _dvc output below.
-# Of the properties here:
-# noarch is not inherited and must be specified per output
-# number is propagated into the outputs below
-
-build:
-  number: 1
-
-requirements:
-  run:
-    - {{ pin_subpackage("_dvc", exact=True) }}
-    - {{ pin_subpackage("_dvc-gs", exact=True) }}
-    - {{ pin_subpackage("_dvc-gdrive", exact=True) }}
-    - {{ pin_subpackage("_dvc-s3", exact=True) }}
-    - {{ pin_subpackage("_dvc-azure", exact=True) }}
-    - {{ pin_subpackage("_dvc-oss", exact=True) }}
-    - {{ pin_subpackage("_dvc-ssh", exact=True) }}
-    - {{ pin_subpackage("_dvc-hdfs", exact=True) }}
-
-test:
-  requires:
-    - git
-  imports:
-    - dvc
-  commands:
-    - dvc version
-
+# 1. Under a new output specifying the additional runtime requirements
+# 2. Under outputs->dvc->requirements.run with a pin_subpackage directive, to
+#    include it in the `dvc` metapackage
 outputs:
+  - name: dvc
+    requirements:
+      run:
+        - {{ pin_subpackage("_dvc", exact=True) }}
+        - {{ pin_subpackage("_dvc-gs", exact=True) }}
+        - {{ pin_subpackage("_dvc-gdrive", exact=True) }}
+        - {{ pin_subpackage("_dvc-s3", exact=True) }}
+        - {{ pin_subpackage("_dvc-azure", exact=True) }}
+        - {{ pin_subpackage("_dvc-oss", exact=True) }}
+        - {{ pin_subpackage("_dvc-ssh", exact=True) }}
+        - {{ pin_subpackage("_dvc-hdfs", exact=True) }}
+      test:
+        requires:
+          - git
+        imports:
+          - dvc
+        commands:
+          - dvc version
+
   - name: _dvc
     build:
       entry_points:
