@@ -38,10 +38,13 @@ source:
   patches:
     - build.patch
 
+# The "true" build is specified in the _dvc output below.
+# Of the properties here:
+# noarch is not inherited and must be specified per output
+# number is propagated into the outputs below
+
 build:
-  # noarch is not inherited below, and must be specified for every package
   noarch: python
-  # number is propagated into the outputs below
   number: 1
 
 requirements:
