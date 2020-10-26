@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "1.8.4" %}
+{% set version = "1.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -34,7 +34,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 983aa453ae1d8f9319bfc9fbd1d37fd901e9538bfae00cec0b5156ca8c5a64d1
+  sha256: 905385b8cf616d9cd1e78530f0c8dc7f2064400efa72e6846fad689b5cfbf8fd
   patches:
     - build.patch
 
@@ -42,7 +42,7 @@ build:
   # noarch is not inherited below, and must be specified for every package
   noarch: python
   # number is propagated into the outputs below
-  number: 3
+  number: 1
 
 requirements:
   run:
@@ -127,7 +127,7 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage("_dvc", exact=True) }}
-        - pydrive2 >=1.6.2
+        - pydrive2 >=1.6.3
 
   - name: _dvc-s3
     build:
@@ -152,7 +152,6 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage("_dvc", exact=True) }}
-        - azure-storage-blob >=12.0
         - oss2 >=2.11.0
 
   - name: _dvc-ssh
