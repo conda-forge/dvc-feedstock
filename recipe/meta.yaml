@@ -192,3 +192,5 @@ extra:
     - shcheklein
     - efiop
     - skshetry
+    # metapackage support
+    - asford
