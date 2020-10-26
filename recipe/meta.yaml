@@ -71,7 +71,7 @@ outputs:
       entry_points:
         - dvc = dvc.main:main
       script:
-        - ${PYTHON} -m pip install . --no-deps -vv
+        - python -m pip install . --no-deps -vv
 
     requirements:
       host:
