@@ -44,7 +44,6 @@ source:
 # number is propagated into the outputs below
 
 build:
-  noarch: python
   number: 1
 
 requirements:
