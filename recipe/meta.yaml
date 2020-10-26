@@ -18,6 +18,15 @@ source:
 build:
   number: 1
 
+# These tests are executed for the top-level `dvc` package
+test:
+  requires:
+    - git
+  imports:
+    - dvc
+  commands:
+    - dvc version
+
 # DVC includes requirements-only extras to enable support for different
 # remotes. Here we build a `dvc` conda package equivalent to the `dvc[all]` pip
 # package, with a `_dvc` base package containing dvc alone. This allows a
@@ -57,13 +66,6 @@ outputs:
         - {{ pin_subpackage("_dvc-oss", exact=True) }}
         - {{ pin_subpackage("_dvc-ssh", exact=True) }}
         - {{ pin_subpackage("_dvc-hdfs", exact=True) }}
-      test:
-        requires:
-          - git
-        imports:
-          - dvc
-        commands:
-          - dvc version
 
   - name: _dvc
     build:
