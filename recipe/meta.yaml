@@ -26,6 +26,7 @@ test:
     - dvc
   commands:
     - dvc version
+    - 'dvc version | grep "Supports: azure, gdrive, gs, hdfs, http, https, s3, ssh, oss"'
 
 # DVC includes requirements-only extras to enable support for different
 # remotes. Here we build a `dvc` conda package equivalent to the `dvc[all]` pip
@@ -73,6 +74,16 @@ outputs:
         - dvc = dvc.main:main
       script:
         - python -m pip install . --no-deps -vv
+
+    # Base package supports dvc, but only supports built-in remotes
+    test:
+      requires:
+        - git
+      imports:
+        - dvc
+      commands:
+        - dvc version
+        - 'dvc version | grep "Supports: http, https"'
 
     requirements:
       host:
