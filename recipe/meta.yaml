@@ -11,7 +11,7 @@ source:
   patches:
     - build.patch
 
-# The "true" build is specified in the _dvc output below.
+# The "true" build is specified in the dvc-base output below.
 # Of the build properties here and below:
 # number is propagated into the outputs below
 build:
@@ -30,14 +30,14 @@ test:
 
 # DVC includes requirements-only extras to enable support for different
 # remotes. Here we build a `dvc` conda package equivalent to the `dvc[all]` pip
-# package, with a `_dvc` base package containing dvc alone. This allows a
+# package, with a `dvc` base package containing dvc alone. This allows a
 # happy-path of:
 #
 #   `conda install -c conda-forge dvc`
 #
 # supporting dvc and all remotes and a power-user path of:
 #
-#   `conda install -c conda-forge _dvc _dvc-s3`
+#   `conda install -c conda-forge dvc dvc-s3`
 #
 # for dvc and specific remotes.
 #
@@ -45,9 +45,9 @@ test:
 #
 # We define extras through "private" subpackages and a single top-level `dvc`
 # metapackage. The metapackage at a given build version references the extras
-# subpackages at the same build version. `_dvc` includes the dvc package itself
-# and core dependencies. `_dvc-gs`, `_dvc-s3`, et al contain no code, but
-# reference the `_dvc` base package and the requirements requirements for that extra.
+# subpackages at the same build version. `dvc-base` includes the dvc package itself
+# and core dependencies. `dvc-gs`, `dvc-s3`, et al contain no code, but
+# reference the `dvc` base package and the requirements requirements for that extra.
 #
 # Adding a new extra...
 #
@@ -62,16 +62,16 @@ outputs:
         - python
       run:
         - python
-        - {{ pin_subpackage("_dvc", exact=True) }}
-        - {{ pin_subpackage("_dvc-gs", exact=True) }}
-        - {{ pin_subpackage("_dvc-gdrive", exact=True) }}
-        - {{ pin_subpackage("_dvc-s3", exact=True) }}
-        - {{ pin_subpackage("_dvc-azure", exact=True) }}
-        - {{ pin_subpackage("_dvc-oss", exact=True) }}
-        - {{ pin_subpackage("_dvc-ssh", exact=True) }}
-        - {{ pin_subpackage("_dvc-hdfs", exact=True) }}
+        - {{ pin_subpackage("dvc-base", exact=True) }}
+        - {{ pin_subpackage("dvc-gs", exact=True) }}
+        - {{ pin_subpackage("dvc-gdrive", exact=True) }}
+        - {{ pin_subpackage("dvc-s3", exact=True) }}
+        - {{ pin_subpackage("dvc-azure", exact=True) }}
+        - {{ pin_subpackage("dvc-oss", exact=True) }}
+        - {{ pin_subpackage("dvc-ssh", exact=True) }}
+        - {{ pin_subpackage("dvc-hdfs", exact=True) }}
 
-  - name: _dvc
+  - name: dvc-base
     build:
       entry_points:
         - dvc = dvc.main:main
@@ -129,70 +129,70 @@ outputs:
         - shtab >=1.3.2,<2
         - rich >=3.0.5
 
-  - name: _dvc-gs
+  - name: dvc-gs
     requirements:
       host:
         - python
       run:
         - python
-        - {{ pin_subpackage("_dvc", exact=True) }}
+        - {{ pin_subpackage("dvc-base", exact=True) }}
         - google-cloud-storage ==1.19.0
 
-  - name: _dvc-gdrive
+  - name: dvc-gdrive
     requirements:
       host:
         - python
       run:
         - python
-        - {{ pin_subpackage("_dvc", exact=True) }}
+        - {{ pin_subpackage("dvc-base", exact=True) }}
         - pydrive2 >=1.6.3
 
-  - name: _dvc-s3
+  - name: dvc-s3
     requirements:
       host:
         - python
       run:
         - python
-        - {{ pin_subpackage("_dvc", exact=True) }}
+        - {{ pin_subpackage("dvc-base", exact=True) }}
         - boto3 >=1.9.201
 
-  - name: _dvc-azure
+  - name: dvc-azure
     requirements:
       host:
         - python
       run:
         - python
-        - {{ pin_subpackage("_dvc", exact=True) }}
+        - {{ pin_subpackage("dvc-base", exact=True) }}
         - azure-storage-blob >=12.0
         - knack
 
-  - name: _dvc-oss
+  - name: dvc-oss
     requirements:
       host:
         - python
       run:
         - python
-        - {{ pin_subpackage("_dvc", exact=True) }}
+        - {{ pin_subpackage("dvc-base", exact=True) }}
         - oss2 >=2.11.0
 
-  - name: _dvc-ssh
+  - name: dvc-ssh
     requirements:
       host:
         - python
       run:
         - python
-        - {{ pin_subpackage("_dvc", exact=True) }}
+        - {{ pin_subpackage("dvc-base", exact=True) }}
         - paramiko >=2.7.0
         # for paramiko, see https://github.com/iterative/dvc/issues/4589
         - invoke >=1.3
 
-  - name: _dvc-hdfs
+  - name: dvc-hdfs
     requirements:
       host:
         - python
       run:
         - python
-        - {{ pin_subpackage("_dvc", exact=True) }}
+        - {{ pin_subpackage("dvc-base", exact=True) }}
         - pyarrow >=0.17.1
 
 about:
