@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "1.9.0" %}
+{% set version = "1.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 905385b8cf616d9cd1e78530f0c8dc7f2064400efa72e6846fad689b5cfbf8fd
+  sha256: 920408645d3c9ccb0f96b40ccbda00a188c8b3552d493a6ba5a8b7756d7acfd3
   patches:
     - build.patch
 
@@ -15,7 +15,7 @@ source:
 # Of the build properties here and below:
 # number is propagated into the outputs below
 build:
-  number: 2
+  number: 0
   skip: true  # [py<36]
 
 # These tests are executed for the top-level `dvc` package
