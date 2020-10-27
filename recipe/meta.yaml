@@ -58,7 +58,10 @@ test:
 outputs:
   - name: dvc
     requirements:
+      host:
+        - python
       run:
+        - python
         - {{ pin_subpackage("_dvc", exact=True) }}
         - {{ pin_subpackage("_dvc-gs", exact=True) }}
         - {{ pin_subpackage("_dvc-gdrive", exact=True) }}
@@ -128,38 +131,56 @@ outputs:
 
   - name: _dvc-gs
     requirements:
+      host:
+        - python
       run:
+        - python
         - {{ pin_subpackage("_dvc", exact=True) }}
         - google-cloud-storage ==1.19.0
 
   - name: _dvc-gdrive
     requirements:
+      host:
+        - python
       run:
+        - python
         - {{ pin_subpackage("_dvc", exact=True) }}
         - pydrive2 >=1.6.3
 
   - name: _dvc-s3
     requirements:
+      host:
+        - python
       run:
+        - python
         - {{ pin_subpackage("_dvc", exact=True) }}
         - boto3 >=1.9.201
 
   - name: _dvc-azure
     requirements:
+      host:
+        - python
       run:
+        - python
         - {{ pin_subpackage("_dvc", exact=True) }}
         - azure-storage-blob >=12.0
         - knack
 
   - name: _dvc-oss
     requirements:
+      host:
+        - python
       run:
+        - python
         - {{ pin_subpackage("_dvc", exact=True) }}
         - oss2 >=2.11.0
 
   - name: _dvc-ssh
     requirements:
+      host:
+        - python
       run:
+        - python
         - {{ pin_subpackage("_dvc", exact=True) }}
         - paramiko >=2.7.0
         # for paramiko, see https://github.com/iterative/dvc/issues/4589
@@ -167,7 +188,10 @@ outputs:
 
   - name: _dvc-hdfs
     requirements:
+      host:
+        - python
       run:
+        - python
         - {{ pin_subpackage("_dvc", exact=True) }}
         - pyarrow >=0.17.1
 
