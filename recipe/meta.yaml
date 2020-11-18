@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "1.9.1" %}
+{% set version = "1.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 920408645d3c9ccb0f96b40ccbda00a188c8b3552d493a6ba5a8b7756d7acfd3
+  sha256: ceaeab6ac7c0b36d0d9cbc638f3d5a09446ea140a823c04aafbb6203da7ee727
   patches:
     - build.patch
 
@@ -98,6 +98,7 @@ outputs:
         - colorama >=0.3.9
         - configobj >=5.0.6
         - gitpython >=2.1.8
+        - dulwich >=0.20.11
         - gitdb2 >=2.0.6
         - setuptools >=34.0.0
         - nanotime >=0.5.2
@@ -194,6 +195,15 @@ outputs:
         - python
         - {{ pin_subpackage("dvc-base", exact=True) }}
         - pyarrow >=0.17.1
+
+  - name: dvc-webhdfs
+    requirements:
+      host:
+        - python
+      run:
+        - python
+        - {{ pin_subpackage("dvc-base", exact=True) }}
+        - python-hdfs >=2.5.7
 
 about:
   home: https://dvc.org/
