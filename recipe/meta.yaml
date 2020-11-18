@@ -195,6 +195,15 @@ outputs:
         - {{ pin_subpackage("dvc-base", exact=True) }}
         - pyarrow >=0.17.1
 
+  - name: dvc-webhdfs
+    requirements:
+      host:
+        - python
+      run:
+        - python
+        - {{ pin_subpackage("dvc-base", exact=True) }}
+        - python-hdfs >=2.5.7
+
 about:
   home: https://dvc.org/
   license: Apache-2.0
