@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "1.10.1" %}
+{% set version = "1.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ae88507a48ebc9cbd8015dcd4fd06e4ed784bf9b9b960c4443a0696979b2c69d
+  sha256: 871feaf6d6526c8be3ad9d3e8632b2d9bc1aeaa124de53d99f5d92d16d48204b
   patches:
     - build.patch
 
@@ -129,6 +129,8 @@ outputs:
         - dpath >=1.4.2
         - shtab >=1.3.2,<2
         - rich >=3.0.5
+        - pyparsing ==2.4.7
+        - typing_extensions >=3.7.4
 
   - name: dvc-gs
     requirements:
