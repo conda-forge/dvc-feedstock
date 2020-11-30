@@ -37,7 +37,7 @@ test:
 #
 # supporting dvc and all remotes and a power-user path of:
 #
-#   `conda install -c conda-forge dvc dvc-s3`
+#   `conda install -c conda-forge dvc-base dvc-s3`
 #
 # for dvc and specific remotes.
 #
