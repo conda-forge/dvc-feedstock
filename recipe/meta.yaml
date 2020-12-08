@@ -47,7 +47,7 @@ test:
 # metapackage. The metapackage at a given build version references the extras
 # subpackages at the same build version. `dvc-base` includes the dvc package itself
 # and core dependencies. `dvc-gs`, `dvc-s3`, et al contain no code, but
-# reference the `dvc` base package and the requirements requirements for that extra.
+# reference the `dvc` base package and the requirements for that extra.
 #
 # Adding a new extra...
 #
