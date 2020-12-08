@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "1.11.2" %}
+{% set version = "1.11.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 25cdc5bf11f67f06bddf19396785b9d6a4ce2040bc4d3c5d943e6eb5c6435852
+  sha256: 12d7384209abdcd16854ace801ac9b84a553170274ac9779a09c13e3b6667536
   patches:
     - build.patch
 
@@ -47,7 +47,7 @@ test:
 # metapackage. The metapackage at a given build version references the extras
 # subpackages at the same build version. `dvc-base` includes the dvc package itself
 # and core dependencies. `dvc-gs`, `dvc-s3`, et al contain no code, but
-# reference the `dvc` base package and the requirements requirements for that extra.
+# reference the `dvc` base package and the requirements for that extra.
 #
 # Adding a new extra...
 #
