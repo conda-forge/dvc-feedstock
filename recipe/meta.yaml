@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "1.11.6" %}
+{% set version = "1.11.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 41ba76c51c6142b28dae3aab039cb12423ba52fed6bd2a838f8308f315cfc20b
+  sha256: 660717dab5369f091b13b620a0de4699101c6b0cb311dd53bb472590daa41215
   patches:
     - build.patch
 
@@ -120,7 +120,7 @@ outputs:
         - flufl.lock >=3.2,<4
         - win_unicode_console >=0.5  # [win]
         - pywin32 >=225  # [win]
-        - networkx >=2.1,<2.5
+        - networkx >=2.1
         - pydot >=1.2.4
         - dataclasses  # [py<37]
         - flatten-dict >=0.3.0,<1
