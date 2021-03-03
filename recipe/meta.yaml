@@ -47,6 +47,7 @@ outputs:
         - configobj >=5.0.6
         - gitpython >=2.1.8
         - dulwich >=0.20.11
+        - pygit2 >=1.4.0
         - gitdb2 >=2.0.6
         - setuptools >=34.0.0
         - nanotime >=0.5.2
