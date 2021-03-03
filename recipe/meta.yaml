@@ -81,6 +81,7 @@ outputs:
         - rich >=3.0.5
         - pyparsing ==2.4.7
         - typing_extensions >=3.7.4
+        - diskcache >=5.2.1
 
   - name: dvc-gs
     test:
