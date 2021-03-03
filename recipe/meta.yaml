@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 85690d95667c6360224f107161e5886ecdd25d570bac80593f64718438208623
+  sha256: c55950ceb4591fabdcf96d50c8816ca949038dcca4e0320017235c3c54848774
   patches:
     - build.patch
 
@@ -92,7 +92,7 @@ outputs:
         - dvc
       commands:
         - dvc version
-        - 'dvc version | grep gs'
+        - dvc version | grep gs
     requirements:
       host:
         - python
@@ -109,7 +109,7 @@ outputs:
         - dvc
       commands:
         - dvc version
-        - 'dvc version | grep gdrive'
+        - dvc version | grep gdrive
     requirements:
       host:
         - python
@@ -126,7 +126,7 @@ outputs:
         - dvc
       commands:
         - dvc version
-        - 'dvc version | grep s3'
+        - dvc version | grep s3
     requirements:
       host:
         - python
@@ -143,7 +143,7 @@ outputs:
         - dvc
       commands:
         - dvc version
-        - 'dvc version | grep azure'
+        - dvc version | grep azure
     requirements:
       host:
         - python
@@ -162,7 +162,7 @@ outputs:
         - dvc
       commands:
         - dvc version
-        - 'dvc version | grep oss'
+        - dvc version | grep oss
     requirements:
       host:
         - python
@@ -179,7 +179,7 @@ outputs:
         - dvc
       commands:
         - dvc version
-        - 'dvc version | grep ssh'
+        - dvc version | grep ssh
     requirements:
       host:
         - python
@@ -198,7 +198,7 @@ outputs:
         - dvc
       commands:
         - dvc version
-        - 'dvc version | grep hdfs'
+        - dvc version | grep hdfs
     requirements:
       host:
         - python
@@ -215,7 +215,7 @@ outputs:
         - dvc
       commands:
         - dvc version
-        - 'dvc version | grep webhdfs'
+        - dvc version | grep webhdfs
     requirements:
       host:
         - python
