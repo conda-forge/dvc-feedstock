@@ -18,16 +18,6 @@ build:
   number: 0
   skip: true  # [py<36]
 
-# These tests are executed for the top-level `dvc` package
-test:
-  requires:
-    - git
-  imports:
-    - dvc
-  commands:
-    - dvc version
-    - 'dvc version | grep "Supports: azure, gdrive, gs, hdfs, http, https, s3, ssh, oss"'
-
 outputs:
   - name: dvc
     build:
@@ -92,6 +82,14 @@ outputs:
         - typing_extensions >=3.7.4
 
   - name: dvc-gs
+    test:
+      requires:
+        - git
+      imports:
+        - dvc
+      commands:
+        - dvc version
+        - 'dvc version | grep gs'
     requirements:
       host:
         - python
@@ -101,6 +99,14 @@ outputs:
         - gcsfs >=0.7.2
 
   - name: dvc-gdrive
+    test:
+      requires:
+        - git
+      imports:
+        - dvc
+      commands:
+        - dvc version
+        - 'dvc version | grep gdrive'
     requirements:
       host:
         - python
@@ -110,6 +116,14 @@ outputs:
         - pydrive2 >=1.6.3
 
   - name: dvc-s3
+    test:
+      requires:
+        - git
+      imports:
+        - dvc
+      commands:
+        - dvc version
+        - 'dvc version | grep s3'
     requirements:
       host:
         - python
@@ -119,6 +133,14 @@ outputs:
         - boto3 >=1.9.201
 
   - name: dvc-azure
+    test:
+      requires:
+        - git
+      imports:
+        - dvc
+      commands:
+        - dvc version
+        - 'dvc version | grep azure'
     requirements:
       host:
         - python
@@ -130,6 +152,14 @@ outputs:
         - knack
 
   - name: dvc-oss
+    test:
+      requires:
+        - git
+      imports:
+        - dvc
+      commands:
+        - dvc version
+        - 'dvc version | grep oss'
     requirements:
       host:
         - python
@@ -139,6 +169,14 @@ outputs:
         - oss2 >=2.11.0
 
   - name: dvc-ssh
+    test:
+      requires:
+        - git
+      imports:
+        - dvc
+      commands:
+        - dvc version
+        - 'dvc version | grep ssh'
     requirements:
       host:
         - python
@@ -150,6 +188,14 @@ outputs:
         - invoke >=1.3
 
   - name: dvc-hdfs
+    test:
+      requires:
+        - git
+      imports:
+        - dvc
+      commands:
+        - dvc version
+        - 'dvc version | grep hdfs'
     requirements:
       host:
         - python
@@ -159,6 +205,14 @@ outputs:
         - pyarrow >=0.17.1
 
   - name: dvc-webhdfs
+    test:
+      requires:
+        - git
+      imports:
+        - dvc
+      commands:
+        - dvc version
+        - 'dvc version | grep webhdfs'
     requirements:
       host:
         - python
