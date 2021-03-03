@@ -167,7 +167,8 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc-base", exact=True) }}
-        - azure-storage-blob >=12.0
+        - adlfs >=0.6.3
+        - azure-identity >=1.4.0
         - knack
 
   - name: dvc-oss
