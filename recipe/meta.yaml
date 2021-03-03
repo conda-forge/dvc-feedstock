@@ -121,6 +121,7 @@ outputs:
         - win_unicode_console >=0.5  # [win]
         - pywin32 >=225  # [win]
         - networkx >=2.1
+        - psutil >=5.8.0
         - pydot >=1.2.4
         - dataclasses  # [py<37]
         - flatten-dict >=0.3.0,<1
