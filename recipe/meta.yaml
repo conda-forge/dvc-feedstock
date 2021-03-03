@@ -140,7 +140,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc-base", exact=True) }}
-        - google-cloud-storage ==1.19.0
+        - gcsfs >=0.7.2
 
   - name: dvc-gdrive
     requirements:
