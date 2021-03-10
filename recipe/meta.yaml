@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.0.4" %}
+{% set version = "2.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d3a0fb2af4d41abf958d94bb6a6c004e493d68c1502df616fd4ab199de68d896
+  sha256: e315b247e20689f54e08d80e5c380f95e201730d0887ce8f7cfdc4f8a61e2426
   patches:
     - build.patch
 
@@ -116,7 +116,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - pydrive2 >=1.6.3
+        - pydrive2 >=1.8.1
 
   - name: dvc-s3
     test:
