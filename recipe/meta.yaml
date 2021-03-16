@@ -15,7 +15,7 @@ source:
 # Of the build properties here and below:
 # number is propagated into the outputs below
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36]
 
 outputs:
