@@ -10,6 +10,7 @@ source:
   sha256: eb432c3a2512be432ca0b2879eff11e2cf25a14bd4d6c783ef8500f8e8f8de6d
   patches:
     - build.patch
+    - test_requirements.patch
 
 # The "true" build is specified in the dvc output below.
 # Of the build properties here and below:
