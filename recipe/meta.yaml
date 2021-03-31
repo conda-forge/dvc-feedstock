@@ -16,7 +16,7 @@ source:
 # number is propagated into the outputs below
 build:
   number: 0
-  skip: true  # [py<36]
+  skip: true  # [py<=36 and win]
 
 outputs:
   - name: dvc
