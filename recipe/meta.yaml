@@ -150,7 +150,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - adlfs >=0.6.3
+        - adlfs >=0.7.0
         - azure-identity >=1.4.0
         - knack
 
