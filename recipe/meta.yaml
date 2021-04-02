@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.0.16" %}
+{% set version = "2.0.17" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6516ba70b5bf6c53478130fea9d8fb79ebafa310a85855df6ef48afc19cadf0a
+  sha256: 5e528f3dfc22b02d25c79ff2791f02c3fd5706b8320e071ba18789a6f60e2fe6
   patches:
     - build.patch
 
@@ -150,7 +150,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - adlfs >=0.6.3
+        - adlfs >=0.7.0
         - azure-identity >=1.4.0
         - knack
 
