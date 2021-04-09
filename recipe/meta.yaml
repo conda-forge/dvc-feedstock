@@ -30,9 +30,11 @@ outputs:
     test:
       requires:
         - git
+        - pip
       imports:
         - dvc
       commands:
+        - pip check
         - dvc version
         - 'dvc version | grep "Supports: http, https"'
 
@@ -79,6 +81,8 @@ outputs:
         - dpath >=1.4.2
         - shtab >=1.3.2,<2
         - rich >=10.0.0
+        - dictdiffer>=0.8.1
+        - python-benedict >=0.21.1
         - pyparsing ==2.4.7
         - typing_extensions >=3.7.4
         - fsspec >=0.8.5
@@ -88,9 +92,11 @@ outputs:
     test:
       requires:
         - git
+        - pip
       imports:
         - dvc
       commands:
+        - pip check
         - dvc version
         - dvc version | grep gs
     requirements:
@@ -105,9 +111,11 @@ outputs:
     test:
       requires:
         - git
+        - pip
       imports:
         - dvc
       commands:
+        - pip check
         - dvc version
         - dvc version | grep gdrive
     requirements:
@@ -122,9 +130,11 @@ outputs:
     test:
       requires:
         - git
+        - pip
       imports:
         - dvc
       commands:
+        - pip check
         - dvc version
         - dvc version | grep s3
     requirements:
@@ -139,9 +149,11 @@ outputs:
     test:
       requires:
         - git
+        - pip
       imports:
         - dvc
       commands:
+        - pip check
         - dvc version
         - dvc version | grep azure
     requirements:
@@ -158,9 +170,11 @@ outputs:
     test:
       requires:
         - git
+        - pip
       imports:
         - dvc
       commands:
+        - pip check
         - dvc version
         - dvc version | grep oss
     requirements:
@@ -175,9 +189,11 @@ outputs:
     test:
       requires:
         - git
+        - pip
       imports:
         - dvc
       commands:
+        - pip check
         - dvc version
         - dvc version | grep ssh
     requirements:
@@ -194,9 +210,11 @@ outputs:
     test:
       requires:
         - git
+        - pip
       imports:
         - dvc
       commands:
+        - pip check
         - dvc version
         - dvc version | grep hdfs
     requirements:
@@ -211,9 +229,11 @@ outputs:
     test:
       requires:
         - git
+        - pip
       imports:
         - dvc
       commands:
+        - pip check
         - dvc version
         - dvc version | grep webhdfs
     requirements:
