@@ -87,7 +87,6 @@ outputs:
         - typing_extensions >=3.7.4
         - fsspec >=0.8.5
         - diskcache >=5.2.1
-        - importlib-metadata  # Undeclared upstream dependency
 
   - name: dvc-gs
     test:
@@ -107,7 +106,6 @@ outputs:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
         - gcsfs >=0.7.2
-        - importlib-metadata  # Undeclared upstream dependency
 
   - name: dvc-gdrive
     test:
@@ -127,7 +125,6 @@ outputs:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
         - pydrive2 >=1.8.1
-        - importlib-metadata  # Undeclared upstream dependency
 
   - name: dvc-s3
     test:
@@ -147,7 +144,6 @@ outputs:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
         - boto3 >=1.9.201
-        - importlib-metadata  # Undeclared upstream dependency
 
   - name: dvc-azure
     test:
@@ -169,7 +165,6 @@ outputs:
         - adlfs >=0.7.0
         - azure-identity >=1.4.0
         - knack
-        - importlib-metadata  # Undeclared upstream dependency
 
   - name: dvc-oss
     test:
@@ -189,7 +184,6 @@ outputs:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
         - oss2 >=2.11.0
-        - importlib-metadata  # Undeclared upstream dependency
 
   - name: dvc-ssh
     test:
@@ -211,7 +205,6 @@ outputs:
         - paramiko >=2.7.0
         # for paramiko, see https://github.com/iterative/dvc/issues/4589
         - invoke >=1.3
-        - importlib-metadata  # Undeclared upstream dependency
 
   - name: dvc-hdfs
     test:
@@ -231,7 +224,6 @@ outputs:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
         - pyarrow >=0.17.1
-        - importlib-metadata  # Undeclared upstream dependency
 
   - name: dvc-webhdfs
     test:
@@ -251,7 +243,6 @@ outputs:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
         - python-hdfs >=2.5.7
-        - importlib-metadata  # Undeclared upstream dependency
 
 about:
   home: https://dvc.org/
