@@ -215,6 +215,7 @@ outputs:
       requires:
         - git
         - pip
+        - importlib-metadata  # Undeclared upstream dependency
       imports:
         - dvc
       commands:
