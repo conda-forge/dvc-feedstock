@@ -93,6 +93,8 @@ outputs:
       requires:
         - git
         - pip
+        - ujson  # Undeclared upstream dependency
+        - importlib-metadata  # Undeclared upstream dependency
       imports:
         - dvc
       commands:
@@ -112,6 +114,8 @@ outputs:
       requires:
         - git
         - pip
+        - ujson  # Undeclared upstream dependency
+        - importlib-metadata  # Undeclared upstream dependency
       imports:
         - dvc
       commands:
