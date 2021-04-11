@@ -107,7 +107,6 @@ outputs:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
         - gcsfs >=0.7.2
-        - ujson  # Undeclared upstream dependency
         - importlib-metadata  # Undeclared upstream dependency
 
   - name: dvc-gdrive
@@ -128,7 +127,6 @@ outputs:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
         - pydrive2 >=1.8.1
-        - ujson  # Undeclared upstream dependency
         - importlib-metadata  # Undeclared upstream dependency
 
   - name: dvc-s3
