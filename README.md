@@ -141,6 +141,7 @@ Installing `dvc` from the `conda-forge` channel can be achieved by adding `conda
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `dvc, dvc-azure, dvc-gdrive, dvc-gs, dvc-hdfs, dvc-oss, dvc-s3, dvc-ssh, dvc-webhdfs` can be installed with:
