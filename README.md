@@ -221,6 +221,7 @@ Feedstock Maintainers
 =====================
 
 * [@efiop](https://github.com/efiop/)
+* [@maresb](https://github.com/maresb/)
 * [@shcheklein](https://github.com/shcheklein/)
 * [@skshetry](https://github.com/skshetry/)
 
