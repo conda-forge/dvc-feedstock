@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8e26a8c49a295d920ec1ba507f79f592afdfa1d4454dc1454460409051e30917
+  sha256: 6e46525483f9b472d6d44c08f8a662611326465de6f717b374bd663d6f681d56
   patches:
     - build.patch
 
@@ -70,7 +70,7 @@ outputs:
         - flufl.lock >=3.2,<4
         - win_unicode_console >=0.5  # [win]
         - pywin32 >=225  # [win]
-        - networkx >=2.1
+        - networkx ~=2.5
         - psutil >=5.8.0
         - pydot >=1.2.4
         - speedcopy >=2.0.1  # [py<38 and win]
