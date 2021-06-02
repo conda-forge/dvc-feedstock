@@ -70,7 +70,7 @@ outputs:
         - flufl.lock >=3.2,<4
         - win_unicode_console >=0.5  # [win]
         - pywin32 >=225  # [win]
-        - networkx >=2.1
+        - networkx ~=2.5
         - psutil >=5.8.0
         - pydot >=1.2.4
         - speedcopy >=2.0.1  # [py<38 and win]
