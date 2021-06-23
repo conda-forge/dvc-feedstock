@@ -85,7 +85,7 @@ outputs:
         - python-benedict >=0.21.1
         - pyparsing ==2.4.7
         - typing_extensions >=3.7.4
-        - fsspec ==2021.5.0
+        - fsspec ==2021.6.0
         - diskcache >=5.2.1
 
   - name: dvc-gs
