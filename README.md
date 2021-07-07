@@ -132,6 +132,7 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-dvc--oss-green.svg)](https://anaconda.org/conda-forge/dvc-oss) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dvc-oss.svg)](https://anaconda.org/conda-forge/dvc-oss) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dvc-oss.svg)](https://anaconda.org/conda-forge/dvc-oss) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dvc-oss.svg)](https://anaconda.org/conda-forge/dvc-oss) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-dvc--s3-green.svg)](https://anaconda.org/conda-forge/dvc-s3) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dvc-s3.svg)](https://anaconda.org/conda-forge/dvc-s3) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dvc-s3.svg)](https://anaconda.org/conda-forge/dvc-s3) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dvc-s3.svg)](https://anaconda.org/conda-forge/dvc-s3) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-dvc--ssh-green.svg)](https://anaconda.org/conda-forge/dvc-ssh) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dvc-ssh.svg)](https://anaconda.org/conda-forge/dvc-ssh) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dvc-ssh.svg)](https://anaconda.org/conda-forge/dvc-ssh) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dvc-ssh.svg)](https://anaconda.org/conda-forge/dvc-ssh) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-dvc--webdav-green.svg)](https://anaconda.org/conda-forge/dvc-webdav) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dvc-webdav.svg)](https://anaconda.org/conda-forge/dvc-webdav) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dvc-webdav.svg)](https://anaconda.org/conda-forge/dvc-webdav) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dvc-webdav.svg)](https://anaconda.org/conda-forge/dvc-webdav) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-dvc--webhdfs-green.svg)](https://anaconda.org/conda-forge/dvc-webhdfs) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dvc-webhdfs.svg)](https://anaconda.org/conda-forge/dvc-webhdfs) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dvc-webhdfs.svg)](https://anaconda.org/conda-forge/dvc-webhdfs) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dvc-webhdfs.svg)](https://anaconda.org/conda-forge/dvc-webhdfs) |
 
 Installing dvc
@@ -144,10 +145,10 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `dvc, dvc-azure, dvc-gdrive, dvc-gs, dvc-hdfs, dvc-oss, dvc-s3, dvc-ssh, dvc-webhdfs` can be installed with:
+Once the `conda-forge` channel has been enabled, `dvc, dvc-azure, dvc-gdrive, dvc-gs, dvc-hdfs, dvc-oss, dvc-s3, dvc-ssh, dvc-webdav, dvc-webhdfs` can be installed with:
 
 ```
-conda install dvc dvc-azure dvc-gdrive dvc-gs dvc-hdfs dvc-oss dvc-s3 dvc-ssh dvc-webhdfs
+conda install dvc dvc-azure dvc-gdrive dvc-gs dvc-hdfs dvc-oss dvc-s3 dvc-ssh dvc-webdav dvc-webhdfs
 ```
 
 It is possible to list all of the versions of `dvc` available on your platform with:
