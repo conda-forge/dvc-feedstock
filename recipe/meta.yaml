@@ -15,7 +15,7 @@ source:
 # Of the build properties here and below:
 # number is propagated into the outputs below
 build:
-  number: 0
+  number: 1
   skip: true  # [py<=36 and win]
 
 outputs:
@@ -226,6 +226,25 @@ outputs:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
         - pyarrow >=0.17.1
+
+  - name: dvc-webdav
+    test:
+      requires:
+        - git
+        - pip
+      imports:
+        - dvc
+      commands:
+        - pip check
+        - dvc version
+        - dvc version | grep webdav
+    requirements:
+      host:
+        - python
+      run:
+        - python
+        - {{ pin_subpackage("dvc", exact=True) }}
+        - webdav4 >=0.8.2
 
   - name: dvc-webhdfs
     test:
