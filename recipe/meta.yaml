@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.5.0" %}
+{% set version = "2.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eefe92f989813b0494fdc74e06325c2a8ded6c64fb821aa081e90e0185b4d31b
+  sha256: f1e894a4c61a8632c120f2f4fb0bcc272b3fed683a0c2dbe5f237be6931a8843
   patches:
     - build.patch
 
@@ -15,7 +15,7 @@ source:
 # Of the build properties here and below:
 # number is propagated into the outputs below
 build:
-  number: 2
+  number: 0
   skip: true  # [py<=36 and win]
 
 outputs:
