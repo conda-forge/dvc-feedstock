@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.5.4" %}
+{% set version = "2.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0b3b5ff97161b37ecf64e1189c9c34d79215b3a0f516026ae5b3d5e10dc29f92
+  sha256: e3c1e898aff9f52a6653873269ede7a6a4750dd4e51061cabd3947ca9ad12494
   patches:
     - build.patch
 
@@ -54,7 +54,6 @@ outputs:
         - nanotime >=0.5.2
         - pyasn1 >=0.4.1
         - voluptuous >=0.11.7
-        - jsonpath-ng >=1.5.1
         - requests >=2.22.0
         - grandalf ==0.6
         - distro >=1.3.0
@@ -62,7 +61,7 @@ outputs:
         - ruamel.yaml >=0.16.1
         - toml >=0.10.1
         - funcy >=1.14
-        - pathspec >=0.6.0
+        - pathspec >=0.6.0,<0.9.0
         - shortuuid >=0.5.0
         - tqdm >=4.45.0,<5
         - packaging >=19.0
@@ -70,13 +69,13 @@ outputs:
         - flufl.lock >=3.2,<4
         - win_unicode_console >=0.5  # [win]
         - pywin32 >=225  # [win]
-        - networkx ~=2.5
+        - networkx >=2.5
         - psutil >=5.8.0
         - pydot >=1.2.4
         - speedcopy >=2.0.1  # [py<38 and win]
         - dataclasses ==0.7  # [py<37]
         - importlib_metadata >=1.4  # [py<38]
-        - flatten-dict >=0.3.0,<1
+        - flatten-dict >=0.4.1,<1
         - tabulate >=0.8.7
         - pygtrie >=2.3.2
         - dpath >=2.0.1,<3
@@ -86,7 +85,7 @@ outputs:
         - python-benedict >=0.21.1
         - pyparsing ==2.4.7
         - typing_extensions >=3.7.4
-        - fsspec >=2021.6.1
+        - fsspec ==2021.7.0
         - diskcache >=5.2.1
 
   - name: dvc-gs
@@ -106,7 +105,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - gcsfs >=2021.6.1
+        - gcsfs ==2021.7.0
 
   - name: dvc-gdrive
     test:
@@ -125,7 +124,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - pydrive2 >=1.8.1
+        - pydrive2 >=1.9.0
 
   - name: dvc-s3
     test:
@@ -144,8 +143,8 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - s3fs ==2021.6.1
-        - aiobotocore ==1.3.0
+        - s3fs ==2021.7.0
+        - aiobotocore >1.0.1
         - boto3 >=1.9.201
 
   - name: dvc-azure
@@ -165,7 +164,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - adlfs >=0.7.1
+        - adlfs ==2021.7.1
         - azure-identity >=1.4.0
         - knack
 
@@ -186,7 +185,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - oss2 >=2.11.0
+        - ossfs ==2021.7.5
 
   - name: dvc-ssh
     test:
@@ -205,9 +204,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - paramiko >=2.7.0
-        # for paramiko, see https://github.com/iterative/dvc/issues/4589
-        - invoke >=1.3
+        - sshfs ==2021.7.1
 
   - name: dvc-hdfs
     test:
@@ -245,7 +242,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - webdav4 >=0.8.2
+        - webdav4 >=0.9.0
 
   - name: dvc-webhdfs
     test:
