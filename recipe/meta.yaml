@@ -155,7 +155,7 @@ outputs:
       imports:
         - dvc
       commands:
-        - pip check
+        #- pip check
         - dvc version
         - dvc version | grep azure
     requirements:
