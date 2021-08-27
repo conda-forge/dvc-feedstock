@@ -15,8 +15,10 @@ source:
 # Of the build properties here and below:
 # number is propagated into the outputs below
 build:
-  number: 0
+  number: 1
   skip: true  # [py<=36 and win]
+  skip: true  # [py==39 and win]  
+
 
 outputs:
   - name: dvc
@@ -74,7 +76,7 @@ outputs:
         - pydot >=1.2.4
         - speedcopy >=2.0.1  # [py<38 and win]
         - dataclasses ==0.7  # [py<37]
-        - importlib_metadata >=1.4  # [py<38]
+        - importlib-metadata >=1.4  # [py<38]
         - flatten-dict >=0.4.1,<1
         - tabulate >=0.8.7
         - pygtrie >=2.3.2
@@ -152,6 +154,7 @@ outputs:
       requires:
         - git
         - pip
+        - portalocker <2.0  # Temporary; see discussion around <https://github.com/conda-forge/dvc-feedstock/pull/234#issuecomment-907311619>
       imports:
         - dvc
       commands:
