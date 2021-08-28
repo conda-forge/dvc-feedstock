@@ -17,7 +17,6 @@ source:
 build:
   number: 1
   skip: true  # [py<=36 and win]
-  skip: true  # [py==39 and win]  
 
 
 outputs:
