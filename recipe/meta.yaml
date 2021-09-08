@@ -15,7 +15,7 @@ source:
 # Of the build properties here and below:
 # number is propagated into the outputs below
 build:
-  number: 0
+  number: 1
   skip: true  # [py<=36 and win]
 
 
@@ -86,8 +86,9 @@ outputs:
         - python-benedict >=0.21.1
         - pyparsing ==2.4.7
         - typing_extensions >=3.7.4
-        - fsspec ==2021.7.0
+        - fsspec[http] >=2021.8.1
         - diskcache >=5.2.1
+        - aiohttp-retry ==2.4.5
 
   - name: dvc-gs
     test:
@@ -106,7 +107,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - gcsfs ==2021.7.0
+        - gcsfs ==2021.8.1
 
   - name: dvc-gdrive
     test:
@@ -125,7 +126,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - pydrive2 >=1.9.1
+        - pydrive2 >=1.9.2
 
   - name: dvc-s3
     test:
@@ -144,7 +145,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - s3fs ==2021.8.0
+        - s3fs ==2021.8.1
         - aiobotocore >1.0.1
         - boto3 >=1.9.201
 
@@ -166,7 +167,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - adlfs ==2021.7.1
+        - adlfs ==2021.8.2
         - azure-identity >=1.4.0
         - knack
 
@@ -187,7 +188,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - ossfs ==2021.7.5
+        - ossfs ==2021.8.0
 
   - name: dvc-ssh
     test:
@@ -206,7 +207,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - sshfs ==2021.7.1
+        - sshfs ==2021.8.1
 
   - name: dvc-hdfs
     test:
