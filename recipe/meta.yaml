@@ -149,27 +149,27 @@ outputs:
         - aiobotocore >1.0.1
         - boto3 >=1.9.201
 
-#   - name: dvc-azure
-#     test:
-#       requires:
-#         - git
-#         - pip
-#         - portalocker <2.0  # Temporary; see discussion around <https://github.com/conda-forge/dvc-feedstock/pull/234#issuecomment-907311619>
-#       imports:
-#         - dvc
-#       commands:
-#         - pip check
-#         - dvc version
-#         - dvc version | grep azure
-#     requirements:
-#       host:
-#         - python
-#       run:
-#         - python
-#         - {{ pin_subpackage("dvc", exact=True) }}
-#         - adlfs ==2021.8.2
-#         - azure-identity >=1.4.0
-#         - knack
+  - name: dvc-azure
+    test:
+      requires:
+        - git
+        - pip
+        - portalocker <2.0  # Temporary; see discussion around <https://github.com/conda-forge/dvc-feedstock/pull/234#issuecomment-907311619>
+      imports:
+        - dvc
+      commands:
+        - pip check
+        - dvc version
+        - dvc version | grep azure
+    requirements:
+      host:
+        - python
+      run:
+        - python
+        - {{ pin_subpackage("dvc", exact=True) }}
+        - adlfs ==2021.8.2
+        - azure-identity >=1.4.0
+        - knack
 
   - name: dvc-oss
     test:
