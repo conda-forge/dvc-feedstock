@@ -245,7 +245,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - webdav4 >=0.9.0
+        - webdav4 >=0.9.1
 
   - name: dvc-webhdfs
     test:
