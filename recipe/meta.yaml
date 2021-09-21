@@ -85,7 +85,7 @@ outputs:
         - dictdiffer >=0.8.1
         - python-benedict >=0.21.1
         - pyparsing ==2.4.7
-        - typing_extensions >=3.7.4
+        - typing_extensions >=3.10.0.2
         - fsspec ==2021.8.1
         - aiohttp-retry ==2.4.5
         - diskcache >=5.2.1
