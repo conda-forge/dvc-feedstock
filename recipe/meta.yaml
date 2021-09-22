@@ -126,7 +126,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - pydrive2 >=1.9.1
+        - pydrive2 >=1.10.0
 
   - name: dvc-s3
     test:
