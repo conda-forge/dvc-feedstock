@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.6.4" %}
+{% set version = "2.7.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 008e3c6c47766524c06e996081adcf38c337ffea5876ce0d3d7ccfaad2d1b2bd
+  sha256: 754e2c4e0a79e610a1a9da4cebec56c51fba39430334a6dc2e0583bd44f4a89b
   patches:
     - build.patch
 
@@ -15,7 +15,7 @@ source:
 # Of the build properties here and below:
 # number is propagated into the outputs below
 build:
-  number: 2
+  number: 0
   skip: true  # [py<=36 and win]
 
 
@@ -85,8 +85,9 @@ outputs:
         - dictdiffer >=0.8.1
         - python-benedict >=0.21.1
         - pyparsing ==2.4.7
-        - typing_extensions >=3.7.4
-        - fsspec ==2021.7.0
+        - typing_extensions >=3.10.0.2
+        - fsspec ==2021.8.1
+        - aiohttp-retry ==2.4.5
         - diskcache >=5.2.1
 
   - name: dvc-gs
@@ -106,7 +107,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - gcsfs ==2021.7.0
+        - gcsfs ==2021.8.1
 
   - name: dvc-gdrive
     test:
@@ -125,7 +126,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - pydrive2 >=1.9.1
+        - pydrive2 >=1.10.0
 
   - name: dvc-s3
     test:
@@ -144,7 +145,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - s3fs ==2021.8.0
+        - s3fs ==2021.8.1
         - aiobotocore >1.0.1
         - boto3 >=1.9.201
 
@@ -166,7 +167,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - adlfs ==2021.7.1
+        - adlfs ==2021.9.1
         - azure-identity >=1.4.0
         - knack
 
@@ -187,7 +188,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - ossfs ==2021.7.5
+        - ossfs ==2021.8.0
 
   - name: dvc-ssh
     test:
@@ -206,7 +207,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - sshfs ==2021.7.1
+        - sshfs ==2021.8.1
 
   - name: dvc-hdfs
     test:
