@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.7.4" %}
+{% set version = "2.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 754e2c4e0a79e610a1a9da4cebec56c51fba39430334a6dc2e0583bd44f4a89b
+  sha256: 7e82d08b57086d41d55a72a2c372e60f6588c89e3213c43f0372a9224951648e
   patches:
     - build.patch
 
@@ -86,7 +86,7 @@ outputs:
         - python-benedict >=0.21.1
         - pyparsing ==2.4.7
         - typing_extensions >=3.10.0.2
-        - fsspec ==2021.8.1
+        - fsspec ==2021.10.0
         - aiohttp-retry ==2.4.5
         - diskcache >=5.2.1
 
@@ -107,7 +107,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - gcsfs ==2021.8.1
+        - gcsfs ==2021.10.0
 
   - name: dvc-gdrive
     test:
@@ -145,7 +145,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - s3fs ==2021.8.1
+        - s3fs ==2021.10.0
         - aiobotocore >1.0.1
         - boto3 >=1.9.201
 
@@ -207,7 +207,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - sshfs ==2021.8.1
+        - sshfs >=2021.8.1
 
   - name: dvc-hdfs
     test:
@@ -245,8 +245,10 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - webdav4 >=0.9.0
+        - webdav4 >=0.9.1
 
+# NOTE: webhdfs support is baked into the main package.
+# Keeping this one for backward compatibility.
   - name: dvc-webhdfs
     test:
       requires:
@@ -264,7 +266,6 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - python-hdfs >=2.5.7
 
 about:
   home: https://dvc.org/
