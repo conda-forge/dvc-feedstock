@@ -72,6 +72,7 @@ outputs:
         - psutil >=5.8.0
         - pydot >=1.2.4
         - importlib-metadata >=1.4  # [py<38]
+        - importlib-resources >=5.2.2  # [py<39]
         - flatten-dict >=0.4.1,<1
         - tabulate >=0.8.7
         - pygtrie >=2.3.2
