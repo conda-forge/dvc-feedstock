@@ -242,7 +242,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - webdav4 >=0.9.1
+        - webdav4 >=0.9.3
 
 # NOTE: webhdfs support is baked into the main package.
 # Keeping this one for backward compatibility.
