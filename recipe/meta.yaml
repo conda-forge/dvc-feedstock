@@ -51,7 +51,7 @@ outputs:
         - gitpython >3
         - dulwich >=0.20.23
         - pygit2 >=1.5.0
-        - setuptools >=34.0.0
+        - setuptools >=48
         - nanotime >=0.5.2
         - pyasn1 >=0.4.1
         - voluptuous >=0.11.7
