@@ -16,7 +16,7 @@ source:
 # number is propagated into the outputs below
 build:
   number: 0
-  skip: true  # [py<=36 and win]
+  skip: true  # [py<=37 and win]
 
 
 outputs:
@@ -71,7 +71,6 @@ outputs:
         - networkx >=2.5
         - psutil >=5.8.0
         - pydot >=1.2.4
-        - dataclasses ==0.7  # [py<37]
         - importlib-metadata >=1.4  # [py<38]
         - flatten-dict >=0.4.1,<1
         - tabulate >=0.8.7
