@@ -84,7 +84,7 @@ outputs:
         - pyparsing ==2.4.7
         - typing_extensions >=3.7.4
         - fsspec ==2021.10.1
-        - aiohttp-retry ==2.4.5
+        - aiohttp-retry >=2.4.5
         - diskcache >=5.2.1
 
   - name: dvc-gs
