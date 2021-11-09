@@ -15,7 +15,7 @@ source:
 # Of the build properties here and below:
 # number is propagated into the outputs below
 build:
-  number: 0
+  number: 1
   skip: true  # [py<=37 and win]
 
 
@@ -78,7 +78,7 @@ outputs:
         - pygtrie >=2.3.2
         - dpath >=2.0.1,<3
         - shtab >=1.3.4,<2
-        - rich >=10.9.0
+        - rich >=10.13.0
         - dictdiffer >=0.8.1
         - python-benedict >=0.24.2
         - pyparsing ==2.4.7
