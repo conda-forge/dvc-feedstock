@@ -151,7 +151,7 @@ outputs:
       requires:
         - git
         - pip
-        - portalocker <2.0  # Temporary; see discussion around <https://github.com/conda-forge/dvc-feedstock/pull/234#issuecomment-907311619>
+        - portalocker >=1.6,<2.0  # Temporary; see discussion around <https://github.com/conda-forge/dvc-feedstock/pull/234#issuecomment-907311619>
       imports:
         - dvc
       commands:
