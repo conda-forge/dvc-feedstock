@@ -15,7 +15,7 @@ source:
 # Of the build properties here and below:
 # number is propagated into the outputs below
 build:
-  number: 0
+  number: 1
   skip: true  # [py<=37 and win]
 
 
@@ -151,7 +151,7 @@ outputs:
       requires:
         - git
         - pip
-        - portalocker <2.0  # Temporary; see discussion around <https://github.com/conda-forge/dvc-feedstock/pull/234#issuecomment-907311619>
+        - portalocker >=1.6,<2.0  # Temporary; see discussion around <https://github.com/conda-forge/dvc-feedstock/pull/234#issuecomment-907311619>
       imports:
         - dvc
       commands:
