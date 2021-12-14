@@ -86,7 +86,7 @@ outputs:
         - fsspec >=2021.10.1
         - aiohttp-retry >=2.4.5
         - diskcache >=5.2.1
-        - scmrepo ==0.0.3
+        - scmrepo ==0.0.4
 
   - name: dvc-gs
     test:
