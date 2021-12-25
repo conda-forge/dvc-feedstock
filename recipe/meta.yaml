@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.9.2" %}
+{% set version = "2.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 543257907a843952c44bdb1ea84f2ae33d8693584c1175eb49eb95da0c2a2e49
+  sha256: 513d0d9ee3c3123e616f760eb8556ee569121286c3e400a1fe4b3bf66e6dea29
   patches:
     - build.patch
 
@@ -86,7 +86,7 @@ outputs:
         - fsspec >=2021.10.1
         - aiohttp-retry >=2.4.5
         - diskcache >=5.2.1
-        - scmrepo ==0.0.4
+        - scmrepo ==0.0.7
 
   - name: dvc-gs
     test:
