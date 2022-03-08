@@ -77,7 +77,8 @@ outputs:
         - shtab >=1.3.4,<2
         - rich >=10.13.0
         - dictdiffer >=0.8.1
-        - python-benedict >=0.24.2
+        - python-benedict >=0.24.2  # [py<39]
+        - python-benedict >=0.24.2,<0.25.0  # [py>38]
         - pyparsing ==2.4.7
         - typing_extensions >=3.7.4
         - fsspec >=2021.10.1
