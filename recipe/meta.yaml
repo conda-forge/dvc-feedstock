@@ -83,8 +83,9 @@ outputs:
         - fsspec >=2021.10.1
         - aiohttp-retry >=2.4.5
         - diskcache >=5.2.1
-        - scmrepo ==0.0.16
-        - dvc-render ==0.0.4
+        - scmrepo ==0.0.19
+        - dvc-render ==0.0.5
+        - dvclive[image] >=0.7.3
 
   - name: dvc-gs
     test:
@@ -122,7 +123,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - pydrive2 >=1.10.0
+        - pydrive2 >=1.10.1
 
   - name: dvc-s3
     test:
