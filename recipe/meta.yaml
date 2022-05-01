@@ -85,7 +85,7 @@ outputs:
         - diskcache >=5.2.1
         - scmrepo ==0.0.19
         - dvc-render ==0.0.5
-        - dvclive[image] >=0.7.3
+        - dvclive >=0.7.3
 
   - name: dvc-gs
     test:
