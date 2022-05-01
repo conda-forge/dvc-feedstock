@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.10.1" %}
+{% set version = "2.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7dd19d74ca7088167e48269865407a3b402c1de31795b16c77a051280f9a92bf
+  sha256: b2da2306ad4102604b3470a0407e812b13edd0f43a184c945c4b8845e2545f1e
   patches:
     - build.patch
 
@@ -83,8 +83,9 @@ outputs:
         - fsspec >=2021.10.1
         - aiohttp-retry >=2.4.5
         - diskcache >=5.2.1
-        - scmrepo ==0.0.16
-        - dvc-render ==0.0.4
+        - scmrepo ==0.0.19
+        - dvc-render ==0.0.5
+        - dvclive >=0.7.3
 
   - name: dvc-gs
     test:
@@ -122,7 +123,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage("dvc", exact=True) }}
-        - pydrive2 >=1.10.0
+        - pydrive2 >=1.10.1
 
   - name: dvc-s3
     test:
