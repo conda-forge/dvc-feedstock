@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.10.2" %}
+{% set version = "2.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b2da2306ad4102604b3470a0407e812b13edd0f43a184c945c4b8845e2545f1e
+  sha256: 26f5ba2a89a94874a4cc5046835717f8122c6e9adcf7097f5ec93a3a816388a0
   patches:
     - build.patch
 
@@ -16,7 +16,7 @@ source:
 # number is propagated into the outputs below
 build:
   number: 0
-  skip: true  # [py<=37 and win]
+  skip: true  # [py<38]
 
 
 outputs:
@@ -65,10 +65,9 @@ outputs:
         - packaging >=19.0
         - zc.lockfile >=1.2.1
         - flufl.lock >=5
-        - networkx >=2.5
+        - networkx >=2.5,<2.8.3
         - psutil >=5.8.0
         - pydot >=1.2.4
-        - importlib-metadata >=1.4  # [py<38]
         - importlib_resources >=5.2.2  # [py<39]
         - flatten-dict >=0.4.1,<1
         - tabulate >=0.8.7
@@ -83,9 +82,10 @@ outputs:
         - fsspec >=2021.10.1
         - aiohttp-retry >=2.4.5
         - diskcache >=5.2.1
-        - scmrepo ==0.0.19
+        - scmrepo ==0.0.24
         - dvc-render ==0.0.5
         - dvclive >=0.7.3
+        - dvc-data ==0.0.2
 
   - name: dvc-gs
     test:
