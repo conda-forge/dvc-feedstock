@@ -82,10 +82,10 @@ outputs:
         - fsspec >=2021.10.1
         - aiohttp-retry >=2.4.5
         - diskcache >=5.2.1
-        - scmrepo ==0.0.24
-        - dvc-render ==0.0.5
+        - scmrepo ==0.0.25
+        - dvc-render ==0.0.6
         - dvclive >=0.7.3
-        - dvc-data ==0.0.2
+        - dvc-data ==0.0.16
 
   - name: dvc-gs
     test:
