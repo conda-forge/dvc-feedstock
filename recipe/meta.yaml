@@ -86,7 +86,7 @@ outputs:
         - dvc-render ==0.0.6
         - dvclive >=0.7.3
         - dvc-data ==0.0.23
-        - dvc-task ==0.1.0
+        - dvc-task ==0.1.1
 
   - name: dvc-gs
     test:
