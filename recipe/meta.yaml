@@ -35,7 +35,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - 'dvc version | grep "Supports: http, https"'
 
@@ -96,7 +96,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep gs
     requirements:
@@ -115,7 +115,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep gdrive
     requirements:
@@ -134,7 +134,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep s3
     requirements:
@@ -155,7 +155,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep azure
     requirements:
@@ -176,7 +176,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep oss
     requirements:
@@ -195,7 +195,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep ssh
     requirements:
@@ -214,7 +214,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep hdfs
     requirements:
@@ -233,7 +233,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep webdav
     requirements:
@@ -254,7 +254,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep webhdfs
     requirements:
