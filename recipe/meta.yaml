@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.16.0" %}
+{% set version = "2.17.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: db8573333f2e66ec7c803446d6ba585a4200df32aca0a9ce13de93303a0abb8d
+  sha256: d92c7cb66323027e2f485b8d3e05d7a0f46bdf468e64f128bcfd80f6227e80d6
   patches:
     - build.patch
 
@@ -35,7 +35,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - 'dvc version | grep "Supports: http, https"'
 
@@ -58,6 +58,7 @@ outputs:
         - appdirs >=1.4.3
         - ruamel.yaml >=0.17.11
         - toml >=0.10.1
+        - tomlkit >=0.11.1
         - funcy >=1.14
         - pathspec >=0.9.0,<0.10.0
         - shortuuid >=0.5.0
@@ -83,10 +84,10 @@ outputs:
         - aiohttp-retry >=2.4.5
         - diskcache >=5.2.1
         - scmrepo ==0.0.25
-        - dvc-render ==0.0.6
+        - dvc-render ==0.0.9
         - dvclive >=0.7.3
-        - dvc-data ==0.0.23
-        - dvc-task ==0.1.1
+        - dvc-data ==0.1.13
+        - dvc-task ==0.1.2
 
   - name: dvc-gs
     test:
@@ -96,7 +97,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep gs
     requirements:
@@ -115,7 +116,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep gdrive
     requirements:
@@ -134,7 +135,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep s3
     requirements:
@@ -155,7 +156,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep azure
     requirements:
@@ -176,7 +177,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep oss
     requirements:
@@ -195,7 +196,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep ssh
     requirements:
@@ -214,7 +215,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep hdfs
     requirements:
@@ -233,7 +234,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep webdav
     requirements:
@@ -254,7 +255,7 @@ outputs:
       imports:
         - dvc
       commands:
-        #- pip check
+        - pip check
         - dvc version
         - dvc version | grep webhdfs
     requirements:
