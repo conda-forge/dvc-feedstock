@@ -279,6 +279,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - daavoo
     - shcheklein
     - efiop
     - skshetry
