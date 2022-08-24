@@ -77,7 +77,7 @@ test:
     - pip
   imports:
     - dvc
-    - dvc.repo.Repo
+    - dvc.repo
   commands:
     - pip check
     - dvc version
