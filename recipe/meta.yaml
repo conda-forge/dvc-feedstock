@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.24.0" %}
+{% set version = "2.25.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7664749aa897fa733398a39402239de0c70b46f565c612c7d6d82f476aff86f7
+  sha256: 130bee2c1a49dc66e30d13c48edad1b48024ba0d56b726410b04f879aa84ccb4
   patches:
     - build.patch
 
@@ -62,10 +62,10 @@ requirements:
     - fsspec >=2021.10.1
     - aiohttp-retry >=2.4.5
     - diskcache >=5.2.1
-    - scmrepo ==0.0.25
-    - dvc-render ==0.0.9
+    - scmrepo ==0.1.1
+    - dvc-render ==0.0.10
     - dvclive >=0.10.0
-    - dvc-data ==0.4.0
+    - dvc-data ==0.7.1
     - dvc-http ==2.19.1
     - dvc-task ==0.1.2
     - hydra-core >=1.1.0
