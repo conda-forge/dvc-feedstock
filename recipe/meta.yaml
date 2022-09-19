@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.26.2" %}
+{% set version = "2.27.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f51dbe294537ad779b368829c6b89dc3795a2ffeb57efc2210a1f9f660927ecd
+  sha256: 0672e06a0093daa054ed290c5a2604bfcbeefcbedb918d7f58e010ebe7dbd894
   patches:
     - build.patch
 
@@ -63,12 +63,13 @@ requirements:
     - aiohttp-retry >=2.4.5
     - diskcache >=5.2.1
     - scmrepo ==0.1.1
-    - dvc-render ==0.0.10
+    - dvc-render ==0.0.11
     - dvclive >=0.10.0
-    - dvc-data ==0.8.0
+    - dvc-data ==0.10.0
     - dvc-http ==2.19.1
     - dvc-task ==0.1.2
     - hydra-core >=1.1.0
+    - iterative-telemetry ==0.0.5
 
 # Base package supports dvc, but only supports built-in remotes
 test:
