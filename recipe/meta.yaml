@@ -69,7 +69,7 @@ requirements:
     - dvc-http ==2.19.1
     - dvc-task ==0.1.2
     - hydra-core >=1.1.0
-    - iterative-telemetry==0.0.5
+    - iterative-telemetry ==0.0.5
 
 # Base package supports dvc, but only supports built-in remotes
 test:
