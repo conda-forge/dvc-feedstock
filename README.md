@@ -228,6 +228,7 @@ Feedstock Maintainers
 
 * [@daavoo](https://github.com/daavoo/)
 * [@efiop](https://github.com/efiop/)
+* [@pmrowla](https://github.com/pmrowla/)
 * [@shcheklein](https://github.com/shcheklein/)
 * [@skshetry](https://github.com/skshetry/)
 
