@@ -65,9 +65,9 @@ requirements:
     - scmrepo ==0.1.1
     - dvc-render ==0.0.11
     - dvclive >=0.10.0
-    - dvc-data ==0.13.0
+    - dvc-data ==0.14.0
     - dvc-http ==2.27.2
-    - dvc-task ==0.1.2
+    - dvc-task ==0.1.3
     - hydra-core >=1.1.0
     - iterative-telemetry ==0.0.5
 
