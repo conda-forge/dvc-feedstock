@@ -12,6 +12,7 @@ source:
     - build.patch
 
 build:
+  noarch: python
   number: 0
   skip: true  # [py<38]
   entry_points:
