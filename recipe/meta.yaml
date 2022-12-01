@@ -62,10 +62,10 @@ requirements:
     - fsspec >=2021.10.1
     - aiohttp-retry >=2.4.5
     - diskcache >=5.2.1
-    - scmrepo ==0.1.3
+    - scmrepo ==0.1.4
     - dvc-render ==0.0.14
     - dvclive >=1.0.0
-    - dvc-data ==0.28.0
+    - dvc-data ==0.28.3
     - dvc-http ==2.27.2
     - dvc-task ==0.1.6
     - hydra-core >=1.1.0
