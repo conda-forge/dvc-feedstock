@@ -12,8 +12,8 @@ source:
     - build.patch
 
 build:
-  number: 0
-  skip: true  # [py<38]
+  noarch: python
+  number: 1
   entry_points:
     - dvc = dvc.main:main
   script:
@@ -21,10 +21,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.8
     - pip
   run:
-    - python
+    - python >=3.8
     - ply >=3.9
     - colorama >=0.3.9
     - configobj >=5.0.6
@@ -49,7 +49,7 @@ requirements:
     - networkx >=2.5,<2.8.3
     - psutil >=5.8.0
     - pydot >=1.2.4
-    - importlib_resources >=5.2.2  # [py<39]
+    - importlib_resources >=5.2.2
     - flatten-dict >=0.4.1,<1
     - tabulate >=0.8.7
     - pygtrie >=2.3.2
@@ -105,3 +105,4 @@ extra:
     - efiop
     - skshetry
     - pmrowla
+    - weiji14
