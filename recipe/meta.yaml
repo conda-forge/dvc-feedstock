@@ -14,7 +14,6 @@ source:
 build:
   noarch: python
   number: 1
-  skip: true  # [py<38]
   entry_points:
     - dvc = dvc.main:main
   script:
