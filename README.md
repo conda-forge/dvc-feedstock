@@ -156,4 +156,5 @@ Feedstock Maintainers
 * [@pmrowla](https://github.com/pmrowla/)
 * [@shcheklein](https://github.com/shcheklein/)
 * [@skshetry](https://github.com/skshetry/)
+* [@weiji14](https://github.com/weiji14/)
 
