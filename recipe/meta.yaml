@@ -22,10 +22,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.8
     - pip
   run:
-    - python
+    - python >=3.8
     - ply >=3.9
     - colorama >=0.3.9
     - configobj >=5.0.6
