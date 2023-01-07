@@ -61,6 +61,7 @@ requirements:
     - dvc-task ==0.1.9
     - hydra-core >=1.1.0
     - iterative-telemetry ==0.0.6
+    - dvc-studio-client
 
 # Base package supports dvc, but only supports built-in remotes
 test:
