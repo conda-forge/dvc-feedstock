@@ -53,12 +53,12 @@ requirements:
     - rich >=10.13.0
     - pyparsing >=2.4.7
     - typing_extensions >=3.7.4
-    - scmrepo ==0.1.4
-    - dvc-render ==0.0.15
+    - scmrepo ==0.1.5
+    - dvc-render ==0.0.17
     - dvclive >=1.2.2
-    - dvc-data ==0.28.4
-    - dvc-http ==2.27.2
-    - dvc-task ==0.1.8
+    - dvc-data ==0.28.5
+    - dvc-http
+    - dvc-task ==0.1.9
     - hydra-core >=1.1.0
     - iterative-telemetry ==0.0.6
 
