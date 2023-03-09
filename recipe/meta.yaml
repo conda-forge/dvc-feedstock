@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.46.0" %}
+{% set version = "2.47.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2652679d2ab6803f4f4fe091278eef4bbf79b4e2e3e58fbf713522ada7ad6e78
+  sha256: dd1bbae4ae2df56864d0d74f62da6aa1750a6c806705a1ca5586f924f77c3212
   patches:
     - build.patch
 
@@ -31,7 +31,7 @@ requirements:
     - requests >=2.22.0
     - grandalf >=0.7,<1
     - distro >=1.3.0
-    - appdirs >=1.4.3
+    - platformdirs <4,>=3
     - ruamel.yaml >=0.17.11
     - tomlkit >=0.11.1
     - funcy >=1.14
