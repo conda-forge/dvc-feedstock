@@ -55,7 +55,7 @@ requirements:
     - typing_extensions >=3.7.4
     - scmrepo >=0.1.15,<1
     - dvc-render >=0.1.2
-    - dvc-data >=0.42.1,<0.43
+    - dvc-data >=0.43.0,<0.44
     - dvc-http
     - dvc-task >=0.2.0,<1
     - hydra-core >=1.1.0
