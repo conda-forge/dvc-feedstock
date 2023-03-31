@@ -54,14 +54,14 @@ requirements:
     - rich >=10.13.0
     - pyparsing >=2.4.7
     - typing_extensions >=3.7.4
-    - scmrepo >=0.1.15,<1
+    - scmrepo >=0.1.17,<1
     - dvc-render >=0.1.2
-    - dvc-data >=0.44.0,<0.45
+    - dvc-data >=0.46.0,<0.47
     - dvc-http
     - dvc-task >=0.2.0,<1
     - hydra-core >=1.1.0
     - iterative-telemetry >=0.0.7
-    - dvc-studio-client >=0.1.1
+    - dvc-studio-client >=0.6.1,<1
 
 # Base package supports dvc, but only supports built-in remotes
 test:
