@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - dvc = dvc.main:main
   script:
@@ -54,7 +54,7 @@ requirements:
     - rich >=10.13.0
     - pyparsing >=2.4.7
     - typing_extensions >=3.7.4
-    - scmrepo >=0.1.17,<1
+    - scmrepo >=0.2.1,<1
     - dvc-render >=0.1.2
     - dvc-data >=0.47.1,<0.48
     - dvc-http
