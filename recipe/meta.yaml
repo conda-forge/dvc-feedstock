@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "2.53.0" %}
+{% set version = "2.54.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d1d160fa04802676cef701bbd32a950bf490d832d387037c45acfd64e88dc567
+  sha256: aec4ecdd5025f61a63001319975b30f22d2bfa8861cf723ea0636fad901ef934
   patches:
     - build.patch
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - dvc = dvc.main:main
   script:
@@ -54,10 +54,10 @@ requirements:
     - rich >=10.13.0
     - pyparsing >=2.4.7
     - typing_extensions >=3.7.4
-    - scmrepo >=0.2.1,<1
+    - scmrepo <2,>=1.0.0
     - dvc-render >=0.1.2
     - dvc-data >=0.47.1,<0.48
-    - dvc-http
+    - dvc-http >=2.29.0
     - dvc-task >=0.2.0,<1
     - hydra-core >=1.1.0
     - iterative-telemetry >=0.0.7
