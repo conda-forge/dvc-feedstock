@@ -66,6 +66,7 @@ test:
   requires:
     - git
     - pip
+    - pytest
   imports:
     - dvc
     - dvc.repo
