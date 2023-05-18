@@ -64,6 +64,7 @@ requirements:
 # Base package supports dvc, but only supports built-in remotes
 test:
   requires:
+    - dvc-ssh
     - git
     - pip
     - pytest
