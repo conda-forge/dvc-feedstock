@@ -4,13 +4,13 @@ Date: Sun, 3 Nov 2019 21:05:24 +0100
 Subject: [PATCH] add build patch
 
 ---
- dvc/utils/build.py | 2 +-
+ dvc/_build.py | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/dvc/utils/build.py b/dvc/utils/build.py
+diff --git a/dvc/_build.py b/dvc/_build.py
 index 7bf1d88..84c77c8 100644
---- a/dvc/utils/build.py
-+++ b/dvc/utils/build.py
+--- a/dvc/_build.py
++++ b/dvc/_build.py
 @@ -1 +1 @@
 -PKG = "pip"
 +PKG = "conda"
