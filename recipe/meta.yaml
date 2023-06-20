@@ -15,7 +15,7 @@ build:
   noarch: python
   number: 0
   entry_points:
-    - dvc = dvc.main:main
+    - dvc = dvc.cli:main
   script:
     - python -m pip install . --no-deps -vv
 
