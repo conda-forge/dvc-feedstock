@@ -8,3 +8,4 @@ bot:
   automerge: true
 conda_build:
   pkg_format: '2'
+inspection: update-grayskull
