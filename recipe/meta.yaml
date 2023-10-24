@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "3.24.0" %}
+{% set version = "3.27.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e657bb08689e9c5c0395e4b1e618dc514189d6f9f663f3a1d08e947a629cbab0
+  sha256: c04f40b4471b695cbe5452a6cbffac47d078863f7e462da2208238e6fb813ab5
   patches:
     - build.patch
 
@@ -25,7 +25,7 @@ requirements:
     - pip
     - setuptools_scm >=7
   run:
-    - gto >=1.3.0,<2
+    - gto >=1.4.0,<2
     - colorama >=0.3.9
     - configobj >=5.0.6
     - distro >=1.3
