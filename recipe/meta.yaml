@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "3.31.2" %}
+{% set version = "3.32.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 25a53dc49a37558f7a57a74747c45d6607f83972ae450d10ba00e194e70c3a90
+  sha256: fe47e88f91d48daa669c34233940b0fa5ce0762e7ccc303f892561bcae6cdf0c
   patches:
     - build.patch
 
@@ -33,7 +33,7 @@ requirements:
     - dvc-data >=2.22.1,<2.23.0
     - dvc-http >=2.29.0
     - dvc-render >=0.3.1,<1
-    - dvc-studio-client >=0.13.0,<1
+    - dvc-studio-client >=0.17.1,<1
     - dvc-task >=0.3.0,<1
     - flatten-dict <1,>=0.4.1
     - flufl.lock >=5,<8
