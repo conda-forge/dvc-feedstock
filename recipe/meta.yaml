@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "3.33.0" %}
+{% set version = "3.33.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 28d11f13e5e83efbce9441a7da517bdce3fb3e386bec7bb990e0c98b59b149dd
+  sha256: 2458852fc21762ed8384073e17575f3f7b60cdd22a31a7d1a55083a89ede8dd9
   patches:
     - build.patch
 
@@ -30,7 +30,7 @@ requirements:
     - configobj >=5.0.6
     - distro >=1.3
     - dpath <3,>=2.1.0
-    - dvc-data >=2.22.1,<2.23.0
+    - dvc-data >=2.24,<2.25
     - dvc-http >=2.29.0
     - dvc-render >=1.0.0,<2
     - dvc-studio-client >=0.17.1,<1
