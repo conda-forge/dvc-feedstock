@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "3.33.4" %}
+{% set version = "3.35.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2458852fc21762ed8384073e17575f3f7b60cdd22a31a7d1a55083a89ede8dd9
+  sha256: d3745f01dfded6f89dbb7a8a12d1fd5afb1252fb8755c2b512c29b934f62c866
   patches:
     - build.patch
 
@@ -25,12 +25,12 @@ requirements:
     - pip
     - setuptools_scm >=7
   run:
-    - gto >=1.4.0,<2
+    - gto >=1.6.0,<2
     - colorama >=0.3.9
     - configobj >=5.0.6
     - distro >=1.3
     - dpath <3,>=2.1.0
-    - dvc-data >=2.24,<2.25
+    - dvc-data >=3.1,<3.2
     - dvc-http >=2.29.0
     - dvc-render >=1.0.0,<2
     - dvc-studio-client >=0.17.1,<1
@@ -53,7 +53,7 @@ requirements:
     - requests >=2.22
     - rich >=12
     - ruamel.yaml >=0.17.11
-    - scmrepo >=1.5.0,<2
+    - scmrepo >=2.0.2,<3
     - shortuuid >=0.5
     - shtab <2,>=1.3.4
     - tabulate >=0.8.7
