@@ -21,7 +21,7 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - pip
     - setuptools_scm >=7
   run:
@@ -49,7 +49,7 @@ requirements:
     - pydot >=1.2.4
     - pygtrie >=2.3.2
     - pyparsing >=2.4.7
-    - python >=3.8
+    - python >=3.9
     - requests >=2.22
     - rich >=12
     - ruamel.yaml >=0.17.11
