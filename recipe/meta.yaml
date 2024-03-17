@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   entry_points:
     - dvc = dvc.cli:main
   script:
@@ -25,6 +25,7 @@ requirements:
     - pip
     - setuptools_scm >=7
   run:
+    - attrs >=22.2
     - gto >=1.6.0,<2
     - colorama >=0.3.9
     - configobj >=5.0.6
