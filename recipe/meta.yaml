@@ -25,7 +25,7 @@ requirements:
     - pip
     - setuptools_scm >=7
   run:
-    - attrs >=2.22.0
+    - attrs >=22.2
     - gto >=1.6.0,<2
     - colorama >=0.3.9
     - configobj >=5.0.6
