@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "3.55.0" %}
+{% set version = "3.55.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e4c889dd9c381c83d5df48a914c62d16db3098c3fb34817f7818e0ee67484d3d
+  sha256: 6d41391333d6dad2eb5f9110a6148d3d5290866106f9b4d8dedb9badd1d02166
   patches:
     - build.patch
 
