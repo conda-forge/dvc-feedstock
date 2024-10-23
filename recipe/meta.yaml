@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "3.55.2" %}
+{% set version = "3.56.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2fbb38385753d51b25967c80e672cf9dea046bdac182c159a2c1d1f246d15ce0
+  sha256: 4591152c5cd95fe2a6bd3b508293e98b96b7367538942c39be4e5fdeec3ec43e
   patches:
     - build.patch
 
@@ -60,7 +60,7 @@ requirements:
     - requests >=2.22
     - rich >=12
     - ruamel.yaml >=0.17.11
-    - scmrepo >=3.3.4,<4
+    - scmrepo >=3.3.8,<4
     - shortuuid >=0.5
     - shtab <2,>=1.3.4
     - tabulate >=0.8.7
