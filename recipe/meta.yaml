@@ -1,13 +1,13 @@
 {% set name = "dvc" %}
-{% set version = "3.56.0" %}
+{% set version = "3.57.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4591152c5cd95fe2a6bd3b508293e98b96b7367538942c39be4e5fdeec3ec43e
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 60d6c42bf2fd4fa847ba7f4a7ebb0ff036bc065792d7b3bba375cc54d0652b6b
   patches:
     - build.patch
 
@@ -29,7 +29,7 @@ requirements:
     - attrs >=22.2.0
     - celery
     - colorama >=0.3.9
-    - configobj >=5.0.6
+    - configobj >=5.0.9
     - distro >=1.3
     - dpath <3,>=2.1.0
     - dulwich
@@ -52,7 +52,7 @@ requirements:
     - omegaconf
     - packaging >=19
     - pathspec >=0.10.3
-    - platformdirs <4,>=3.1.1
+    - platformdirs <5,>=3.1.1
     - psutil >=5.8
     - pydot >=1.2.4
     - pygtrie >=2.3.2
