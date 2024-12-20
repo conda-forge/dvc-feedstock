@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - dvc = dvc.cli:main
   script:
@@ -21,11 +21,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools_scm >=7
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - attrs >=22.2.0
     - celery
     - colorama >=0.3.9
@@ -74,6 +74,7 @@ test:
   requires:
     - git
     - pip
+    - python {{ python_min }}
   imports:
     - dvc
     - dvc.repo
