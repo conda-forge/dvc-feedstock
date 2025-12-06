@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "3.64.1" %}
+{% set version = "3.64.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3e75f612cf5d18a3bd3ce22bc3fcd750446dcff7eed9c792fb9586013e140d86
+  sha256: e5e677d2ab09a26e236ff6a6ba86f3e84be08b6871a4b45dbc234e1c4ddd2258
   patches:
     - build.patch
 
@@ -25,6 +25,7 @@ requirements:
     - pip
     - setuptools_scm >=7
   run:
+    - flatten_dict <1,>=0.4.1
     - python >={{ python_min }}
     - attrs >=22.2.0
     - celery
