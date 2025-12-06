@@ -25,7 +25,6 @@ requirements:
     - pip
     - setuptools_scm >=7
   run:
-    - flatten_dict <1,>=0.4.1
     - python >={{ python_min }}
     - attrs >=22.2.0
     - celery
