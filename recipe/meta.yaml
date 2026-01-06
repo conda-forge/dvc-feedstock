@@ -1,5 +1,5 @@
 {% set name = "dvc" %}
-{% set version = "3.65.0" %}
+{% set version = "3.66.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 212fc1d79a29ef76f1a61260e7b0262057a7383dfa047e66d98cfa0a8a18b50e
+  sha256: de999939f21fc258cc0ecc34558e1ac14750b167de8f7c78354ad0fd83be1e09
   patches:
     - build.patch
 
@@ -25,6 +25,7 @@ requirements:
     - pip
     - setuptools_scm >=7
   run:
+    - flatten_dict <1,>=0.4.1
     - python >={{ python_min }}
     - attrs >=22.2.0
     - celery
@@ -40,7 +41,7 @@ requirements:
     - dvc-studio-client >=0.21,<1
     - dvc-task >=0.3.0,<1
     - flatten-dict <1,>=0.4.1
-    - flufl.lock >=8.1.0,<9
+    - flufl.lock >=8.1.0,<10
     - fsspec >=2024.2.0
     - funcy >=1.14
     - grandalf <1,>=0.7
@@ -51,7 +52,7 @@ requirements:
     - networkx >=2.5
     - omegaconf
     - packaging >=19
-    - pathspec >=0.10.3
+    - pathspec >=0.10.3,<1
     - platformdirs <5,>=3.1.1
     - psutil >=5.8
     - pydot >=1.2.4
