@@ -27,6 +27,7 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
+    - setuptools
     - setuptools_scm >=7
   run:
     - flatten_dict <1,>=0.4.1
