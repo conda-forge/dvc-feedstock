@@ -1,31 +1,36 @@
-{% set name = "dvc" %}
-{% set version = "3.65.0" %}
+schema_version: 1
+
+context:
+  name: dvc
+  version: 3.66.0
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 212fc1d79a29ef76f1a61260e7b0262057a7383dfa047e66d98cfa0a8a18b50e
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: de999939f21fc258cc0ecc34558e1ac14750b167de8f7c78354ad0fd83be1e09
   patches:
     - build.patch
 
 build:
-  noarch: python
   number: 0
-  entry_points:
-    - dvc = dvc.cli:main
+  noarch: python
   script:
     - python -m pip install . --no-deps -vv
+  python:
+    entry_points:
+      - dvc = dvc.cli:main
 
 requirements:
   host:
-    - python {{ python_min }}
     - pip
+    - python ${{ python_min }}.*
+    - setuptools
     - setuptools_scm >=7
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - attrs >=22.2.0
     - celery
     - colorama >=0.3.9
@@ -40,7 +45,7 @@ requirements:
     - dvc-studio-client >=0.21,<1
     - dvc-task >=0.3.0,<1
     - flatten-dict <1,>=0.4.1
-    - flufl.lock >=8.1.0,<9
+    - flufl.lock >=8.1.0,<10
     - fsspec >=2024.2.0
     - funcy >=1.14
     - grandalf <1,>=0.7
@@ -51,7 +56,7 @@ requirements:
     - networkx >=2.5
     - omegaconf
     - packaging >=19
-    - pathspec >=0.10.3
+    - pathspec >=0.10.3,<1
     - platformdirs <5,>=3.1.1
     - psutil >=5.8
     - pydot >=1.2.4
@@ -69,33 +74,32 @@ requirements:
     - voluptuous >=0.11.7
     - zc.lockfile >=1.2.1
 
-# Base package supports dvc, but only supports built-in remotes
-test:
-  requires:
-    - git
-    - pip
-    - python {{ python_min }}
-  imports:
-    - dvc
-    - dvc.repo
-  commands:
-    - pip check
-    - dvc version
-    - dvc version | grep {{ version }}
-    - dvc version | grep https
+tests:
+  - python:
+      imports:
+        - dvc
+        - dvc.repo
+      pip_check: true
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - git
+        - python ${{ python_min }}.*
+    script:
+      - dvc version
+      - dvc version | grep ${{ version }}
+      - dvc version | grep https
 
 about:
-  home: https://dvc.org/
-  license: Apache-2.0
-  license_family: Apache
-  license_file: LICENSE
+  homepage: https://dvc.org/
   summary: DVC tracks ML models and data sets
-
+  repository: https://github.com/treeverse/dvc
+  license: Apache-2.0
+  license_file: LICENSE
   description: |
     Data Version Control or DVC is an open-source tool for data science
     and machine learning projects.
-  doc_url: https://dvc.org/doc
-  dev_url: https://github.com/iterative/dvc
+  documentation: https://dvc.org/doc
 
 extra:
   recipe-maintainers:
