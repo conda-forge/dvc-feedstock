@@ -9,13 +9,12 @@ Package license: Apache-2.0
 
 Summary: DVC tracks ML models and data sets
 
-Development: https://github.com/iterative/dvc
+Development: https://github.com/treeverse/dvc
 
 Documentation: https://dvc.org/doc
 
 Data Version Control or DVC is an open-source tool for data science
 and machine learning projects.
-
 
 Current build status
 ====================
