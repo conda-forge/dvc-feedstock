@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: dvc
-  version: 3.66.0
+  version: 3.66.1
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: de999939f21fc258cc0ecc34558e1ac14750b167de8f7c78354ad0fd83be1e09
+  sha256: ed8e07050fdf1fc222ea95afbef8540820179e42022bc068c7b343f2a1304e69
   patches:
     - build.patch
 
@@ -38,7 +38,7 @@ requirements:
     - distro >=1.3
     - dpath <3,>=2.1.0
     - dulwich
-    - dvc-data >=3.17.0,<3.18
+    - dvc-data >=3.18.0,<3.19.0
     - dvc-http >=2.29.0
     - dvc-objects
     - dvc-render >=1.0.1,<2
@@ -73,7 +73,6 @@ requirements:
     - tqdm <5,>=4.63.1
     - voluptuous >=0.11.7
     - zc.lockfile >=1.2.1
-
 tests:
   - python:
       imports:
