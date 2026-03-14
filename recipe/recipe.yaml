@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: dvc
-  version: 3.66.1
+  version: 3.67.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: ed8e07050fdf1fc222ea95afbef8540820179e42022bc068c7b343f2a1304e69
+  sha256: 3b9dd1ee8975a380a659bdb736f8fc684db17bb8d684a6e8651c05c367e7c189
   patches:
     - build.patch
 
@@ -38,7 +38,7 @@ requirements:
     - distro >=1.3
     - dpath <3,>=2.1.0
     - dulwich
-    - dvc-data >=3.18.0,<3.19.0
+    - dvc-data >=3.18.2,<3.19.0
     - dvc-http >=2.29.0
     - dvc-objects
     - dvc-render >=1.0.1,<2
@@ -56,12 +56,12 @@ requirements:
     - networkx >=2.5
     - omegaconf
     - packaging >=19
-    - pathspec >=0.10.3,<1
+    - pathspec >=0.10.3,<2
     - platformdirs <5,>=3.1.1
     - psutil >=5.8
     - pydot >=1.2.4
     - pygtrie >=2.3.2
-    - pyparsing >=2.4.7
+    - pyparsing >=3.0.0
     - requests >=2.22
     - rich >=12
     - ruamel.yaml >=0.17.11
