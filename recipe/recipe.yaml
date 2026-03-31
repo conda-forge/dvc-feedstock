@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: dvc
-  version: 3.67.0
+  version: "3.67.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 3b9dd1ee8975a380a659bdb736f8fc684db17bb8d684a6e8651c05c367e7c189
+  sha256: 0a941016a10ac8c99b5342e5a964c9bff29c191f7b3539ff3e04910d828f82ab
   patches:
     - build.patch
 
